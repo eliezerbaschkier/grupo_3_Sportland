@@ -4,3 +4,16 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 3vw;
+    background-color: #777;
+    border: solid 1px red;
+}
+
+
+
