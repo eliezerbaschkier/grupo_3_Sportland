@@ -1,0 +1,22 @@
+{
+  "name": "grupo_3_sportland",
+  "version": "1.0.0",
+  "description": "Sportland es un ecommerce de artículos deportivos desarrollado por Christian Bogliotti, Gustavo Mei y Eliezer Baschkier. Se ofrecen distintos productos necesarios para la realización de actividad física para los distintos miembros de la familia (hombres, mujeres y niños).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliezerbaschkier/grupo_3_Sportland.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliezerbaschkier/grupo_3_Sportland/issues"
+  },
+  "homepage": "https://github.com/eliezerbaschkier/grupo_3_Sportland#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
