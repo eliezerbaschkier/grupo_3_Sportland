@@ -23,18 +23,24 @@
 }
 
 .menu-icon:hover,
-.cart-icon:hover {
+.cart-icon:hover,
+.login-icon:hover,
+.register-icon:hover {
     color: rgba(231, 222, 222, 0.808);
 }
 
 .nav-bar p {
     margin-left: 5px;
+}
+
+.nav-bar form,
+.nav-bar p,
+.login-icon,
+.register-icon {
     display: none;
 }
 
-.nav-bar form {
-    display: none;
-}
+
 
 @media (min-width: 480px) {
     .nav-bar p {
@@ -48,6 +54,13 @@
     }
     .menu-icon {
         display: none;
+    }
+
+    .login-icon,
+    .register-icon {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 }
 
