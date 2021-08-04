@@ -15,13 +15,15 @@
 }
 
 
-.icon {
+.menu-icon,
+.cart-icon {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.icon:hover {
+.menu-icon:hover,
+.cart-icon:hover {
     color: rgba(231, 222, 222, 0.808);
 }
 
