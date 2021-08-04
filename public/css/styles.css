@@ -42,6 +42,11 @@
     display: none;
 }
 
+.nav-bar form input,
+.nav-bar form button {
+    border-radius: 7.5px;
+}
+
 .nav-bar a,
 .nav-bar a:visited {
     text-decoration: none;
@@ -56,7 +61,7 @@
 
 @media (min-width: 769px) {
     .nav-bar form {
-        display: block;
+        display: flex;
     }
     .menu-icon {
         display: none;
