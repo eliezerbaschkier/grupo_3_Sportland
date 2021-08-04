@@ -36,11 +36,17 @@
 .nav-bar form,
 .nav-bar p,
 .login-icon,
-.register-icon {
+.register-icon,
+.login-hide,
+.register-hide {
     display: none;
 }
 
-
+.nav-bar a,
+.nav-bar a:visited {
+    text-decoration: none;
+    color: black;
+}
 
 @media (min-width: 480px) {
     .nav-bar p {
@@ -57,7 +63,9 @@
     }
 
     .login-icon,
-    .register-icon {
+    .register-icon,
+    .login-hide,
+    .register-hide {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
