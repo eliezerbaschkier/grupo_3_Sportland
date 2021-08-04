@@ -23,18 +23,27 @@
             <input type="text" name="search" placeholder="Buscar productos">
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
-        <div class="login-icon">
-            <i class="fas fa-sign-in-alt"></i>
-            <p>Ingresá</p>
-        </div>
-        <div class="register-icon">
-            <i class="fas fa-id-card"></i>
-            <p>Registrate</p>
-        </div>
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <p>Carrito</p>
-        </div>
+        <a href="/login">    
+            <div class="login-icon">
+                <i class="fas fa-sign-in-alt"></i>
+                <p>Ingresá</p>
+                <!--Check why the hyperlink doesn't work when we click the content of <p>-->
+            </div>
+        </a>
+        <a href="/register">    
+            <div class="register-icon">
+                <i class="fas fa-id-card"></i>
+                <p>Registrate</p>
+                    <!--Check why the hyperlink doesn't work when we click the content of <p>-->
+            </div>
+        </a>
+        <a href="/productCart">    
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Carrito</p>
+                    <!--Check why the hyperlink doesn't work when we click the content of <p>-->
+            </div>
+        </a>
     </header>
     <main>
         <p>Hola mundo, estoy en productDetail</p>
