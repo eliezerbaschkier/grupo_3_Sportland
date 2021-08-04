@@ -15,5 +15,7 @@
     border: solid 1px red;
 }
 
-
+.nav-bar i:hover {
+    color: rgba(231, 222, 222, 0.808);
+}
 
