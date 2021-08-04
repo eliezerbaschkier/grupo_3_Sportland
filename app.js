@@ -13,3 +13,23 @@ app.get('/', (req,res) => {
     let pathHome = path.resolve(publicPath, './views/index.html');
     res.sendFile(pathHome);
 })
+
+app.get('/login', (req,res) => {
+    let pathLogin = path.resolve(publicPath, './views/login.html');
+    res.sendFile(pathLogin);
+})
+
+app.get('/register', (req,res) => {
+    let pathRegister = path.resolve(publicPath, './views/register.html');
+    res.sendFile(pathRegister);
+})
+
+app.get('/productDetail', (req,res) => {
+    let pathProductDetail = path.resolve(publicPath, './views/productDetail.html');
+    res.sendFile(pathProductDetail);
+})
+
+app.get('/productCart', (req,res) => {
+    let pathProductCart = path.resolve(publicPath, './views/productCart.html');
+    res.sendFile(pathProductCart);
+})
