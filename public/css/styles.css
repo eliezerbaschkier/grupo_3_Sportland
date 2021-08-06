@@ -105,6 +105,16 @@ footer {
     .nav-bar p {
         display: block;
     }
+
+    .container-main-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo-fb-inst {
+        flex-basis: 50%;
+    }
 }
 
 @media (min-width: 769px) {
