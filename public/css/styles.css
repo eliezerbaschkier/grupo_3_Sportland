@@ -108,12 +108,14 @@ footer {
 
     .container-main-footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
     }
 
-    .footer-logo-fb-inst {
-        flex-basis: 50%;
+    .footer-logo-fb-inst,
+    .about-us,
+    .useful-links {
+        flex-basis: 30%;
     }
 }
 
@@ -138,6 +140,13 @@ footer {
     .register-icon {
         transition: all 500ms;
     }
-    
+
+    .container-main-footer h4 {
+    font-size: 16px;
+}
+
+    .container-main-footer ul{
+    font-size: 14px;
+}
 }
 
