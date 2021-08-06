@@ -69,6 +69,38 @@ footer {
     background-color: #777;
 }
 
+.footer-logo-fb-inst {
+    padding: 2vh 0;
+}
+
+.fb-inst {
+    padding: 1.5vh 0 0 0;
+}
+
+.about-us,
+.useful-links {
+    padding: 0 0 1.5vh 0;
+}
+
+.container-main-footer h4 {
+    font-size: 14px;
+    padding: 0 0 1.5vh 0;
+}
+
+.container-main-footer ul{
+    list-style: none;
+    font-size: 12px;
+}
+
+.container-main-footer ul li {
+    padding: 0 0 1vh 0;
+}
+
+.copyrights {
+    font-size: 10px;
+    padding-top: 2vh;
+}
+
 @media (min-width: 480px) {
     .nav-bar p {
         display: block;
