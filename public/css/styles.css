@@ -30,6 +30,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: all 500ms;
 }
 
 .menu-icon:hover,
@@ -90,5 +91,11 @@ footer {
         justify-content: space-evenly;
         align-items: center;
     }
+
+    .login-icon,
+    .register-icon {
+        transition: all 500ms;
+    }
+    
 }
 
