@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .Site-content {
+    flex: 1;
+  }
+
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 3vw;
+    background-color: #777;
+}
+
+
+.menu-icon,
+.cart-icon {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 500ms;
+}
+
+.menu-icon:hover,
+.cart-icon:hover,
+.login-icon:hover,
+.register-icon:hover {
+    color: rgba(231, 222, 222, 0.808);
+}
+
+.nav-bar p {
+    margin-left: 5px;
+}
+
+.nav-bar form,
+.nav-bar p,
+.login-icon,
+.register-icon,
+.login-hide,
+.register-hide {
+    display: none;
+}
+
+.nav-bar form input,
+.nav-bar form button {
+    border-radius: 7.5px;
+}
+
+.nav-bar a,
+.nav-bar a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    padding: 3vh 3vw;
+    background-color: #777;
+}
+
+.footer-logo-fb-inst {
+    padding: 2vh 0;
+}
+
+.fb-inst {
+    padding: 1.5vh 0 0 0;
+}
+
+.about-us,
+.useful-links {
+    padding: 0 0 1.5vh 0;
+}
+
+.container-main-footer h4 {
+    font-size: 14px;
+    padding: 0 0 1.5vh 0;
+}
+
+.container-main-footer ul{
+    list-style: none;
+    font-size: 12px;
+}
+
+.container-main-footer ul li {
+    padding: 0 0 1vh 0;
+}
+
+.copyrights {
+    font-size: 10px;
+    padding-top: 2vh;
+}
+
+@media (min-width: 480px) {
+    .nav-bar p {
+        display: block;
+    }
+
+    .container-main-footer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer-logo-fb-inst,
+    .about-us,
+    .useful-links {
+        flex-basis: 30%;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-bar form {
+        display: flex;
+    }
+    .menu-icon {
+        display: none;
+    }
+
+    .login-icon,
+    .register-icon,
+    .login-hide,
+    .register-hide {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .login-icon,
+    .register-icon {
+        transition: all 500ms;
+    }
+
+    .container-main-footer h4 {
+    font-size: 16px;
+}
+
+    .container-main-footer ul{
+    font-size: 14px;
+}
+}
+
