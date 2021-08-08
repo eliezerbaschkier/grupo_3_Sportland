@@ -101,6 +101,73 @@ footer {
     padding-top: 2vh;
 }
 
+/*Formato de main de Login*/
+
+.main-login{
+        background-color: gainsboro;
+    }
+
+.formularioLogin{
+background-color: gainsboro;
+padding: 3vh 5vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.ingresatucuenta{
+
+}
+
+.contenedor-ingresaatucuenta{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorCampoLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.contenedor-ingresaatucuenta,
+div.contenedorCampoLogin input,
+div.contenedorCampoLogin label,
+div.contenedorCampoLogin button,
+div.contenedorCampoLogin p,
+div.contenedorCampoLogin a{
+margin: 1.5vh 0;
+}
+
+div.contenedorCampoLogin button,
+div.contenedorCampoLogin input{
+    padding: 1.5vh 0;
+}
+
+.botonRegistrate{
+    background-color: blue;
+    color: white;
+    border: black;
+    border-radius: 5px;
+    text-align: center;
+    width: 40vw;
+}
+
+a.botonRegistrate i{
+    margin-right: 6vw;
+}
+
+.contenedorBotonRegistrate{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorAunNoTenesCuenta{
+    display: flex;
+    justify-content: center;
+}
+/*Formato de main de Register*/
+
 @media (min-width: 480px) {
     .nav-bar p {
         display: block;

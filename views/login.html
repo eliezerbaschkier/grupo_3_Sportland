@@ -13,14 +13,82 @@
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body class="Site">
-    <header>
-
+    <header class="nav-bar">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+            <p>Menú</p>
+        </div>
+        <img src="" alt="Sportland logo">
+        <form action="/" method="POST">
+            <input type="text" name="search" placeholder="Buscar productos">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <a href="/login" class="login-hide">    
+            <div class="login-icon">
+                <i class="fas fa-sign-in-alt"></i>
+                <p>Ingresá</p>
+            </div>
+        </a>
+        <a href="/register" class="register-hide">    
+            <div class="register-icon">
+                <i class="fas fa-id-card"></i>
+                <p>Registrate</p>
+            </div>
+        </a>
+        <a href="/productCart">    
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Carrito</p>
+            </div>
+        </a>
     </header>
-    <main class="Site-content">
-        <p>Hola mundo, estoy en login</p>
+    <main class="Site-content" class="main-login">
+            <form class="formularioLogin" action="/" method="POST">
+                <div class="contenedor-ingresaatucuenta">
+                    <p class="ingresatucuenta">Ingresá a tu cuenta</p>
+                </div>
+                <div class="contenedorCampoLogin">
+                    <label>E-Mail</label>
+                    <input type="email" name="email" placeholder="Ingresa tu E-Mail">                 
+                    <label>Contraseña</label>
+                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">                 
+                     <button type="submit" name="ingresa">INGRESÁ</button>                 
+                     <p class="contenedorAunNoTenesCuenta">¿Aún no tenés cuenta?</p>
+                    <div class="contenedorBotonRegistrate">
+                        <a href="/register" class="botonRegistrate"><i class="fas fa-id-card"></i>Registrate</a>
+                    </div>
+                </div>
+            </form>
     </main>
     <footer>
-        
+        <div class="container-main-footer">    
+            <div class="footer-logo-fb-inst">
+                <img src="" alt="Sportland logo">
+                <div class="fb-inst">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="about-us">
+                <h4>SOBRE NOSOTROS</h4>
+                <ul>
+                    <li>¿Quiénes somos?</li>
+                    <li>¿Dónde encontrarnos?</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <div class="useful-links">
+                <h4>LINKS ÚTILES</h4>
+                <ul>
+                    <li>Política de privacidad</li>
+                    <li>Términos y condiciones</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrights">
+            <p>SPORTLAND © 2021. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
