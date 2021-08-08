@@ -101,26 +101,26 @@ footer {
     padding-top: 2vh;
 }
 
-/*---------------------Formato de main de Login-----------------------------------------------------------*/
+/*----------------------------Formato de Login-----------------------------------------------------------*/
 
 .contenedorLogin{
     display: flex;
     flex-direction: column;    
     background-color: gainsboro;
-    }
+}
 
 .ingresaTuCuenta{
-        display: flex;
-        justify-content: center;
-        background-color: gainsboro;
-    }
+    display: flex;
+    justify-content: center;
+    background-color: gainsboro;
+}
 
 .contLoginForm{
-background-color: gainsboro;
-padding: 3vh 5vw;
-display: flex;
-flex-direction: column;
-justify-content: center;
+    background-color: gainsboro;
+    padding: 3vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contenedorCampoLogin{
@@ -166,8 +166,8 @@ justify-content: center;
 }
 
 .contLoginFormD i{
-padding-left: 2%;
-padding-right: 20%;
+    padding-left: 2%;
+    padding-right: 20%;
 }
 
 
@@ -178,35 +178,35 @@ padding-right: 20%;
 }
 /*---------------------------------------Formato de main de Register--------------------------------*/
 .contenedorMain{
-display: flex;
-flex-direction: column;
-background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    background-color: gainsboro;
 }
 
 .contenedorMainNav{
-display: flex;
-justify-content: space-around;
-background-color: gainsboro;
-margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color: gainsboro;
+    margin-top: 5px;
 }
 
 .contenedorMainForm{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .contMainFormA{
-padding-left: 20%;
-padding-top: 5%;
-padding-bottom: 3%;
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 
 .contMainFormB{
-margin-left: 20%;
-border-radius: 5px;
-width: 60%;
-padding: 5px;
-padding-top: 15px;
+    margin-left: 20%;
+    border-radius: 5px;
+    width: 60%;
+    padding: 5px;
+    padding-top: 15px;
 }
 
 .contMainButton{
@@ -218,9 +218,6 @@ padding-top: 15px;
     margin-bottom: 20px;
     background-color: rgb(66, 133, 233);
 }
-
-
-
 
 @media (min-width: 480px) {
     .nav-bar p {
