@@ -43,23 +43,25 @@
         </a>
     </header>
     <main class="Site-content">
-        <div class="fondoFormulario">
-            <p>REGISTRATE | ¿Ya tenes una cuenta?&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login">Ingresá</a></p>
+        <div class="contenedorMain">
+            <div class="contenedorMainNav">
+                <p class="contMainNavA">REGISTRATE</p> 
+                <p class="contMainNavA">|</p>
+                <p class="contMainNavA">¿Ya tenes una cuenta?</p>
+                <p class="contMainNavA">|</p>
+                <a href="/login" class="contMainNavA">Ingresá</a>
+            </div>
             
-            <form class="formularioLogin" action="/" method="POST">
-                <label class="espaciado">Nombre</label>
-                 <input type="text" name="nombre" placeholder="Ingresa tu nombre">
-                 <br>
-                 <label class="espaciado">Apellido</label>
-                 <input type="text" name="apellido" placeholder="Ingresa tu apellido">
-                 <br>
-                 <label class="espaciado">E-Mail</label>
-                 <input type="email" name="E-Mail" placeholder="Ingresa tu E-Mail">
-                 <br>
-                 <label class="espaciado">Contraseña</label>
-                 <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">
-                 <br>
-                <button class="boton" type="submit" name="Enviar">CREAR CUENTA</button>
+            <form class="contenedorMainForm" action="/" method="POST">
+                <label class="contMainFormA">Nombre</label>
+                 <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="contMainFormB">                 
+                 <label class="contMainFormA">Apellido</label>
+                 <input type="text" name="apellido" placeholder="Ingresa tu apellido" class="contMainFormB">                 
+                 <label class="contMainFormA">E-Mail</label>
+                 <input type="email" name="E-Mail" placeholder="Ingresa tu E-Mail" class="contMainFormB">                 
+                 <label class="contMainFormA">Contraseña</label>
+                 <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contMainFormB">                 
+                <button class="contMainButton" type="submit" name="Enviar">CREAR CUENTA</button>
             </form>
 
         </div>

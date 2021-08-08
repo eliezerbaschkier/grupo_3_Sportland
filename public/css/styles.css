@@ -101,27 +101,26 @@ footer {
     padding-top: 2vh;
 }
 
-/*Formato de main de Login*/
+/*---------------------Formato de main de Login-----------------------------------------------------------*/
 
-.main-login{
+.contenedorLogin{
+    display: flex;
+    flex-direction: column;    
+    background-color: gainsboro;
+    }
+
+.ingresaTuCuenta{
+        display: flex;
+        justify-content: center;
         background-color: gainsboro;
     }
 
-.formularioLogin{
+.contLoginForm{
 background-color: gainsboro;
 padding: 3vh 5vw;
 display: flex;
 flex-direction: column;
 justify-content: center;
-}
-
-.ingresatucuenta{
-
-}
-
-.contenedor-ingresaatucuenta{
-    display: flex;
-    justify-content: center;
 }
 
 .contenedorCampoLogin{
@@ -130,43 +129,98 @@ justify-content: center;
     justify-content: center;
 }
 
-div.contenedor-ingresaatucuenta,
-div.contenedorCampoLogin input,
-div.contenedorCampoLogin label,
-div.contenedorCampoLogin button,
-div.contenedorCampoLogin p,
-div.contenedorCampoLogin a{
-margin: 1.5vh 0;
+.contLoginFormA{
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
 
-div.contenedorCampoLogin button,
-div.contenedorCampoLogin input{
-    padding: 1.5vh 0;
-}
-
-.botonRegistrate{
-    background-color: blue;
-    color: white;
-    border: black;
+.contLoginFormB{
+    margin-left: 20%;
     border-radius: 5px;
-    text-align: center;
-    width: 40vw;
+    width: 60%;
+    padding: 5px;
+    padding-top: 15px;
 }
 
-a.botonRegistrate i{
-    margin-right: 6vw;
+.contLoginFormC{
+    width: 60%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 20%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(66, 133, 233);
+    color: white;
 }
 
-.contenedorBotonRegistrate{
-    display: flex;
-    justify-content: center;
+.contLoginFormD{
+    width: 60%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 20%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: gray;
+    color: white;
 }
+
+.contLoginFormD i{
+padding-left: 2%;
+padding-right: 20%;
+}
+
+
 
 .contenedorAunNoTenesCuenta{
     display: flex;
     justify-content: center;
 }
-/*Formato de main de Register*/
+/*---------------------------------------Formato de main de Register--------------------------------*/
+.contenedorMain{
+display: flex;
+flex-direction: column;
+background-color: gainsboro;
+}
+
+.contenedorMainNav{
+display: flex;
+justify-content: space-around;
+background-color: gainsboro;
+margin-top: 5px;
+}
+
+.contenedorMainForm{
+display: flex;
+flex-direction: column;
+}
+
+.contMainFormA{
+padding-left: 20%;
+padding-top: 5%;
+padding-bottom: 3%;
+}
+
+.contMainFormB{
+margin-left: 20%;
+border-radius: 5px;
+width: 60%;
+padding: 5px;
+padding-top: 15px;
+}
+
+.contMainButton{
+    width: 35%;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 32%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(66, 133, 233);
+}
+
+
+
 
 @media (min-width: 480px) {
     .nav-bar p {

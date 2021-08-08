@@ -42,21 +42,17 @@
             </div>
         </a>
     </header>
-    <main class="Site-content" class="main-login">
-            <form class="formularioLogin" action="/" method="POST">
-                <div class="contenedor-ingresaatucuenta">
-                    <p class="ingresatucuenta">Ingresá a tu cuenta</p>
-                </div>
+    <main class="Site-content" class="contenedorLogin">
+        <h2 class="ingresaTuCuenta">Ingresá a tu cuenta</h2>
+            <form class="contLoginForm" action="/" method="POST">                
                 <div class="contenedorCampoLogin">
-                    <label>E-Mail</label>
-                    <input type="email" name="email" placeholder="Ingresa tu E-Mail">                 
-                    <label>Contraseña</label>
-                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña">                 
-                     <button type="submit" name="ingresa">INGRESÁ</button>                 
+                    <label class="contLoginFormA">E-Mail</label>
+                    <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB">                 
+                    <label class="contLoginFormA">Contraseña</label>
+                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contLoginFormB">                 
+                     <button type="submit" class="contLoginFormC" name="ingresa">INGRESÁ</button>                 
                      <p class="contenedorAunNoTenesCuenta">¿Aún no tenés cuenta?</p>
-                    <div class="contenedorBotonRegistrate">
-                        <a href="/register" class="botonRegistrate"><i class="fas fa-id-card"></i>Registrate</a>
-                    </div>
+                    <a href="/register" class="contLoginFormD"><i class="fas fa-id-card"></i>Registrate</a>
                 </div>
             </form>
     </main>
