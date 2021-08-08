@@ -9,6 +9,8 @@ app.listen(3000, () => {
     console.log('Server running on port 3000');
 })
 
+//GET
+
 app.get('/', (req,res) => {
     let pathHome = path.resolve(publicPath, './views/index.html');
     res.sendFile(pathHome);
@@ -30,6 +32,23 @@ app.get('/productDetail', (req,res) => {
 })
 
 app.get('/productCart', (req,res) => {
+    let pathProductCart = path.resolve(publicPath, './views/productCart.html');
+    res.sendFile(pathProductCart);
+})
+
+//POST
+
+app.post('/', (req,res) => {
+    let pathHome = path.resolve(publicPath, './views/index.html');
+    res.sendFile(pathHome);
+})
+
+app.post('/productDetail', (req,res) => {
+    let pathProductDetail = path.resolve(publicPath, './views/productDetail.html');
+    res.sendFile(pathProductDetail);
+})
+
+app.post('/productCart', (req,res) => {
     let pathProductCart = path.resolve(publicPath, './views/productCart.html');
     res.sendFile(pathProductCart);
 })

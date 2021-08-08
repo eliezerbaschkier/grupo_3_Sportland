@@ -11,9 +11,11 @@
     flex-direction: column;
   }
   
-  .Site-content {
+.Site-content {
     flex: 1;
-  }
+}
+
+/*Header style*/
 
 .nav-bar {
     display: flex;
@@ -64,6 +66,8 @@
     color: black;
 }
 
+/*Footer style*/
+
 footer {
     padding: 3vh 3vw;
     background-color: #777;
@@ -101,7 +105,35 @@ footer {
     padding-top: 2vh;
 }
 
+
+/*ProductDetail - main*/
+
+div.container-productDetail {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 5vw;
+}
+
+div.container-productDetail h3,
+div.container-productDetail img,
+div.container-productDetail h4,
+div.container-productDetail p,
+div.container-productDetail form {
+    padding: 0.7vh 0;
+}
+
+div.container-productDetail .container-img {
+    max-height: 50%;
+    max-width: 100%;
+}
+
+div.container-productDetail .container-img img {
+    max-width: 100%;
+    height: auto;
+}
+
 /*----------------------------Formato de Login-----------------------------------------------------------*/
+
 
 .contenedorLogin{
     display: flex;
@@ -220,9 +252,14 @@ footer {
 }
 
 @media (min-width: 480px) {
+    
+    /*Header*/
+
     .nav-bar p {
         display: block;
     }
+
+    /*Footer*/
 
     .container-main-footer {
         display: flex;
@@ -238,6 +275,9 @@ footer {
 }
 
 @media (min-width: 769px) {
+
+    /*Header*/
+
     .nav-bar form {
         display: flex;
     }
@@ -259,12 +299,24 @@ footer {
         transition: all 500ms;
     }
 
+    /*Footer*/
+
     .container-main-footer h4 {
-    font-size: 16px;
-}
+        font-size: 16px;
+    }
 
     .container-main-footer ul{
-    font-size: 14px;
-}
+        font-size: 14px;
+    }
+
+    /*ProductDetail main*/
+
+    .container-imgAndproductDescription {
+        display: flex;
+    }
+
+    .container-productDescription {
+        margin-left: 2vw;
+    }
 }
 
