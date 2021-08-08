@@ -4,23 +4,285 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sportland</title>
-    <link rel="stylesheet" href="normalize.css"/>
+    <title>Detalle de producto</title>
+    <link rel="stylesheet" href="/public/css/normalize.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css " rel="stylesheet" />
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
-<body class="Site">
-    <header>
-
+<body class="Site" >
+    <!---------------------------------------------------------------------- INICIO HEADER----------------->
+    <header class="nav-bar">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+            <p>Menú</p>
+        </div>
+        <img  class="logo" src="/public/images/logo_02.png" alt="Sportland logo">
+        <form action="/" method="POST">
+            <input type="text" name="search" placeholder="Buscar productos">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <a href="/login" class="login-hide">    
+            <div class="login-icon">
+                <i class="fas fa-sign-in-alt"></i>
+                <p>Ingresá</p>
+            </div>
+        </a>
+        <a href="/register" class="register-hide">    
+            <div class="register-icon">
+                <i class="fas fa-id-card"></i>
+                <p>Registrate</p>
+            </div>
+        </a>
+        <a href="/productCart">    
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Carrito</p>
+            </div>
+        </a>
     </header>
-    <main class="Site-content">
-        <p>Hola mundo, estoy en index</p>
-    </main>
-    <footer>
+    <!------------------------------------------------------------------------------- FIN HEADER---------->
+    <main class="Index">
 
+        <!--<img  id="banner" src="/public/images/banner3.jpg" alt="banner" >-->
+        <!--div id="banner">Espacio para el banner</div>
+        -->
+
+        <br>
+        <br>
+
+     <!------------------------------------------------BASO EN TU ULTIMA BUSQUEDA---------> 
+     <!----------------------------------------------------------------------------------->  
+        <p class="titulo">Basados en tu última búsqueda</p>
+<div class="contenedor">
+   
+    <!----------------------------------------Bicicleta FIJA-->
+    <div class="cajaGrande">
+        <img src="/public/images/bicicleta_fija.png" alt="" width="20%" height="20%">
+        <div class="cajaChica">   
+                   
+            
+            <div class="columnaIzq">
+                <div class="renglonArriba">  
+                <p class="precios">$56.500</p>
+                <p class="descuentos">20% OFF</p></div>
+                <div class="renglonAbajo"> 
+                <p class="descripciones">Bicicleta Fija</p></div>
+            </div>
+
+            <div class="columnaDer">
+                <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+            </div>
+
+        </div>
+      </div>
+
+     <!----------------------------------------Mancuernas-->
+      <div class="cajaGrande">
+        <img src="/public/images/mancuerna_naranja.png" alt="" width="20%" height="20%">
+        <div class="cajaChica">   
+                   
+            
+            <div class="columnaIzq">
+                <div class="renglonArriba">  
+                <p class="precios">$6000</p>
+                <p class="descuentos">20% OFF</p></div>
+                <div class="renglonAbajo"> 
+                <p class="descripciones">Mancuernas recubiertas de 3kg</p></div>
+            </div>
+
+            <div class="columnaDer">
+                <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+            </div>
+
+        </div>
+      </div>
+
+     <!----------------------------------------Bandas Circulares-->
+     <div class="cajaGrande">
+        <img src="/public/images/bandas_circulares.JPG" alt="" width="20%" height="20%">
+        <div class="cajaChica">   
+                   
+            
+            <div class="columnaIzq">
+                <div class="renglonArriba">  
+                <p class="precios">$1.600</p>
+                <p class="descuentos">20% OFF</p></div>
+                <div class="renglonAbajo"> 
+                <p class="descripciones">Cintas circulares</p></div>
+            </div>
+
+            <div class="columnaDer">
+                <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+            </div>
+
+        </div>
+      </div>
+
+           <!----------------------------------------Cinta Correr-->
+     <div class="cajaGrande">
+        <img src="/public/images/cinta_de_correr.png" alt="" width="20%" height="20%">
+        <div class="cajaChica">   
+                   
+            
+            <div class="columnaIzq">
+                <div class="renglonArriba">  
+                <p class="precios">$61.000</p>
+                <p class="descuentos">20% OFF</p></div>
+                <div class="renglonAbajo"> 
+                <p class="descripciones">Maquina de correr</p></div>
+            </div>
+
+            <div class="columnaDer">
+                <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+            </div>
+
+        </div>
+      </div>
+
+<!-------------------------------------------------------------OFERTAS ESPECIALES---------> 
+     <!----------------------------------------------------------------------------------->  
+     <p class="titulo">Ofertas</p>
+     <div class="contenedor">
+        
+         <!----------------------------------------Bicicleta FIJA-->
+         <div class="cajaGrande">
+             <img src="/public/images/bicicleta_fija.png" alt="" width="20%" height="20%">
+             <div class="cajaChica">   
+                        
+                 
+                 <div class="columnaIzq">
+                     <div class="renglonArriba">  
+                     <p class="precios">$56.500</p>
+                     <p class="descuentos">20% OFF</p></div>
+                     <div class="renglonAbajo"> 
+                     <p class="descripciones">Bicicleta Fija</p></div>
+                 </div>
+     
+                 <div class="columnaDer">
+                     <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                     <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                 </div>
+     
+             </div>
+           </div>
+     
+          <!----------------------------------------Mancuernas-->
+           <div class="cajaGrande">
+             <img src="/public/images/mancuerna_naranja.png" alt="" width="20%" height="20%">
+             <div class="cajaChica">   
+                        
+                 
+                 <div class="columnaIzq">
+                     <div class="renglonArriba">  
+                     <p class="precios">$6000</p>
+                     <p class="descuentos">20% OFF</p></div>
+                     <div class="renglonAbajo"> 
+                     <p class="descripciones">Mancuernas recubiertas de 3kg</p></div>
+                 </div>
+     
+                 <div class="columnaDer">
+                     <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                     <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                 </div>
+     
+             </div>
+           </div>
+     
+          <!----------------------------------------Bandas Circulares-->
+          <div class="cajaGrande">
+             <img src="/public/images/bandas_circulares.JPG" alt="" width="20%" height="20%">
+             <div class="cajaChica">   
+                        
+                 
+                 <div class="columnaIzq">
+                     <div class="renglonArriba">  
+                     <p class="precios">$1.600</p>
+                     <p class="descuentos">20% OFF</p></div>
+                     <div class="renglonAbajo"> 
+                     <p class="descripciones">Cintas circulares</p></div>
+                 </div>
+     
+                 <div class="columnaDer">
+                     <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                     <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                 </div>
+     
+             </div>
+           </div>
+     
+                <!----------------------------------------Cinta Correr-->
+          <div class="cajaGrande">
+             <img src="/public/images/cinta_de_correr.png" alt="" width="20%" height="20%">
+             <div class="cajaChica">   
+                        
+                 
+                 <div class="columnaIzq">
+                     <div class="renglonArriba">  
+                     <p class="precios">$61.000</p>
+                     <p class="descuentos">20% OFF</p></div>
+                     <div class="renglonAbajo"> 
+                     <p class="descripciones">Maquina de correr</p></div>
+                 </div>
+     
+                 <div class="columnaDer">
+                     <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                     <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                 </div>
+     
+             </div>
+           </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    </main>
+
+<!------------------------------------------------------------------------------------ FOOTER  ---------->
+    <footer>
+        <div class="container-main-footer">    
+            <div class="footer-logo-fb-inst">
+                <img src="" alt="Sportland logo">
+                <div class="fb-inst">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+            <div class="about-us">
+                <h4>SOBRE NOSOTROS</h4>
+                <ul>
+                    <li>¿Quiénes somos?</li>
+                    <li>¿Dónde encontrarnos?</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <div class="useful-links">
+                <h4>LINKS ÚTILES</h4>
+                <ul>
+                    <li>Política de privacidad</li>
+                    <li>Términos y condiciones</li>
+                    <li>FAQs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrights">
+            <p>SPORTLAND © 2021. Todos los derechos reservados.</p>
+        </div>
     </footer>
+    <!----------------------------------------------------------------------------- FIN FOOTER  ---------->
 </body>
 </html>
