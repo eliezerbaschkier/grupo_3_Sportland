@@ -11,9 +11,11 @@
     flex-direction: column;
   }
   
-  .Site-content {
+.Site-content {
     flex: 1;
-  }
+}
+
+/*Header style*/
 
 .nav-bar {
     display: flex;
@@ -64,6 +66,8 @@
     color: black;
 }
 
+/*Footer style*/
+
 footer {
     padding: 3vh 3vw;
     background-color: #777;
@@ -100,6 +104,10 @@ footer {
     font-size: 10px;
     padding-top: 2vh;
 }
+
+/*ProductDetail - main*/
+
+
 
 /*Formato de main de Login*/
 
