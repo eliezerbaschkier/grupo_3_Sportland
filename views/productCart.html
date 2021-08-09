@@ -48,49 +48,66 @@
             <h4>Productos</h4>
             <form action="/productCart" method="POST">
                 <article>
-                    <div class="container-imgCart">
-                        <img src="/public/images/camiseta-SMTUC.jpg" alt="Camiseta de San Martín de Tucumán">
+                    <div class="container-imgAndProductInfo">
+                        <div class="container-imgCart">
+                            <img src="/public/images/camiseta-SMTUC.jpg" alt="Camiseta de San Martín de Tucumán">
+                        </div>
+                        <div class="container-productInfo">
+                            <h5>Camiseta de San Martín de Tuc</h5>
+                            <i class="fas fa-trash-alt"></i>
+                            <p>$ 3.000</p>
+                        </div>
                     </div>
-                    <div class="container-productInfo">
-                        <h5>Camiseta de San Martín de Tucumán</h5>
-                        <i class="fas fa-trash-alt"></i>
-                        <p>$ 3.000</p>
-                    </div>
-                    <div>
-                        <label for="quantity">Cantidad</label>
-                        <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
-                    </div>
-                </article>
-                <article>
-                    <div class="container-imgCart">
-                        <img src="/public/images/camiseta-barcelona.jpg" alt="Camiseta de San Martín de Tucumán">
-                    </div>
-                    <div class="container-productInfo">
-                        <h5>Camiseta de Barcelona</h5>
-                        <i class="fas fa-trash-alt"></i>
-                        <p>$ 3.000</p>
-                    </div>
-                    <div>
-                        <label for="quantity">Cantidad</label>
-                        <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                    <div class="container-quantityAndSubtotal">
+                        <div class="container-quantity">
+                            <label for="quantity">Cantidad</label>
+                            <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                        </div>
+                        <h6>Subtotal: $ 3.000</h6>
                     </div>
                 </article>
                 <article>
-                    <div class="container-imgCart">
-                        <img src="/public/images/camiseta-RealMadrid.JPG" alt="Camiseta de San Martín de Tucumán">
+                    <div class="container-imgAndProductInfo">
+                        <div class="container-imgCart">
+                            <img src="/public/images/camiseta-barcelona.jpg" alt="Camiseta de San Martín de Tucumán">
+                        </div>
+                        <div class="container-productInfo">
+                            <h5>Camiseta de Barcelona</h5>
+                            <i class="fas fa-trash-alt"></i>
+                            <p>$ 3.000</p>
+                        </div>
                     </div>
-                    <div class="container-productInfo">
-                        <h5>Camiseta de Real Madrid</h5>
-                        <i class="fas fa-trash-alt"></i>
-                        <p>$ 3.000</p>
-                    </div>
-                    <div>
-                        <label for="quantity">Cantidad</label>
-                        <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                    <div class="container-quantityAndSubtotal">
+                        <div class="container-quantity">
+                            <label for="quantity">Cantidad</label>
+                            <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                        </div>
+                        <h6>Subtotal: $ 3.000</h6>
                     </div>
                 </article>
-                <h4>Total: $9.000</h4>
-                <button type="submit">Comprar</button>
+                <article>
+                    <div class="container-imgAndProductInfo">
+                        <div class="container-imgCart">
+                            <img src="/public/images/camiseta-RealMadrid.JPG" alt="Camiseta de San Martín de Tucumán">
+                        </div>
+                        <div class="container-productInfo">
+                            <h5>Camiseta de Real Madrid</h5>
+                            <i class="fas fa-trash-alt"></i>
+                            <p>$ 3.000</p>
+                        </div>
+                    </div>
+                    <div class="container-quantityAndSubtotal">
+                        <div class="container-quantity">
+                            <label for="quantity">Cantidad</label>
+                            <input value="1" type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                        </div>
+                        <h6>Subtotal: $ 3.000</h6>
+                    </div>
+                </article>
+                <div class="container-totalAndBuy">
+                    <h4>Total: $9.000</h4>
+                    <button type="submit">Comprar</button>
+                </div>
         </form>
         </div>
     </main>
