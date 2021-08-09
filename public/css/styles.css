@@ -120,6 +120,7 @@ div.container-productDetail {
 .container-imgAndproductDescription {
     background-color: #fff;
     padding: 2vh 2vw;
+    border-radius: 5px;
 }
 
 div.container-productDetail h3,
@@ -128,6 +129,10 @@ div.container-productDetail h4,
 div.container-productDetail p,
 div.container-productDetail form {
     padding: 0.7vh 0;
+}
+
+div.container-productDetail input {
+    border-radius: 7.5px;
 }
 
 div.container-productDetail .container-img {
@@ -171,6 +176,7 @@ div.container-productDescription input {
     flex-wrap: wrap;
     padding: 1vh 1vw;
     margin-bottom: 2vh;
+    border-radius: 5px;
 }
 
 .container-imgAndProductInfo {
@@ -208,6 +214,7 @@ div.container-productDescription input {
 
 .container-quantityAndSubtotal input{
     width: 50px;
+    border-radius: 5px;
 }
 
 .container-quantity {
@@ -223,6 +230,7 @@ div.container-productDescription input {
 .container-totalAndBuy button {
     width: 30vw;
     height: 5vh;
+    border-radius: 7.5px;
 }
 /*----------------------------Formato de Login-----------------------------------------------------------*/
 
