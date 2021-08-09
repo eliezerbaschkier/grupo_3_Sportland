@@ -24,6 +24,8 @@
     align-items: center;
     padding: 3vh 3vw;
     background-color: #777;
+    position: sticky;
+    width: 100%;
 }
 
 
