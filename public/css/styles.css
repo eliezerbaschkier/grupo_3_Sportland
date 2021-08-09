@@ -144,6 +144,38 @@ div.container-productDescription input {
     max-height: 10vh;
 }
 
+/*-------------Main-ProductCart----------------*/
+
+.content-productCart {
+    background-color: gainsboro;
+    padding: 2vh 5vw;
+}
+
+.content-productCart h3 {
+    margin-bottom: 1.5vh;
+}
+
+.content-productCart h4 {
+    margin-bottom: 1.5vh;
+}
+
+.content-productCart article {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vh 1vw;
+    margin-bottom: 2vh;
+}
+
+.container-imgCart {
+    height: 90px;
+    width: 90px;
+}
+
+.container-imgCart img {
+    max-width: 100%;
+    height: auto;
+}
 /*----------------------------Formato de Login-----------------------------------------------------------*/
 
 
