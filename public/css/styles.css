@@ -134,6 +134,16 @@ div.container-productDetail .container-img img {
     height: auto;
 }
 
+div.container-productDescription form {
+    display: flex;
+}
+
+div.container-productDescription input {
+    max-width: 25vw;
+    margin-right: 5vw;
+    max-height: 10vh;
+}
+
 /*----------------------------Formato de Login-----------------------------------------------------------*/
 
 
