@@ -339,13 +339,13 @@ div.container-productDescription input {
 
 @media (min-width: 480px) {
     
-    /*Header*/
+    /*----------------Header-----------------*/
 
     .nav-bar p {
         display: block;
     }
 
-    /*Footer*/
+    /*--------------Footer----------------*/
 
     .container-main-footer {
         display: flex;
@@ -359,7 +359,15 @@ div.container-productDescription input {
         flex-basis: 30%;
     }
 
-    /**/
+    /*-------------ProductCart-----------------*/
+
+    .content-productCart form {
+        display: flex;
+    }
+
+    .container-totalAndBuy {
+        margin-left: 3vw;
+    }
 }
 
 @media (min-width: 769px) {
