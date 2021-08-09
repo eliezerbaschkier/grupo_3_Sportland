@@ -114,6 +114,12 @@ div.container-productDetail {
     display: flex;
     flex-direction: column;
     padding: 3vh 5vw;
+    background-color: gainsboro;
+}
+
+.container-imgAndproductDescription {
+    background-color: #fff;
+    padding: 2vh 2vw;
 }
 
 div.container-productDetail h3,
