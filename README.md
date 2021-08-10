@@ -15,3 +15,5 @@ Sitios de referencia:
 10) https://www.opensports.com.ar/ 
 
 Hemos elegido estos sitios como referencia porque tienen un layout similar entre ellas y ofrecen productos para realizar deportes para toda la familia.
+
+Link de Trello: https://trello.com/b/nXJhpLGq/digital-house
