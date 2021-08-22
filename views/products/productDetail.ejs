@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body class="Site">
+    <%- include('../partials/header') %>
+    <main class="Site-content">
+        <div class="container-productDetail">
+            <h3>Información de producto</h3>
+            <div class="container-imgAndproductDescription">
+                <div class="container-img">
+                    <img src="/public/images/camiseta-SMTUC.jpg" alt="Camiseta de San Martín de Tucumán">
+                </div>
+                <div class="container-productDescription">
+                    <h4>Camiseta de San Martín de Tucumán</h4>
+                    <p>$ 3.000</p>
+                    <form action="/productCart" method="POST">
+                        <input type="number" name="quantity" id="quantity" placeholder="Cantidad">
+                        <button type="submit">Agregar al carrito</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

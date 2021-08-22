@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body class="Site">
+    <%- include('../partials/header') %>
+    <main class="Site-content">
+        <div class="contenedorMain">
+            <div class="contenedorMainNav">
+                <p class="contMainNavA">REGISTRATE</p> 
+                <p class="contMainNavA">|</p>
+                <p class="contMainNavA">¿Ya tenes una cuenta?</p>
+                <p class="contMainNavA">|</p>
+                <a href="/login" class="contMainNavA">Ingresá</a>
+            </div>
+            
+            <form class="contenedorMainForm" action="/" method="POST">
+                <label class="contMainFormA">Nombre</label>
+                 <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="contMainFormB">                 
+                 <label class="contMainFormA">Apellido</label>
+                 <input type="text" name="apellido" placeholder="Ingresa tu apellido" class="contMainFormB">                 
+                 <label class="contMainFormA">E-Mail</label>
+                 <input type="email" name="E-Mail" placeholder="Ingresa tu E-Mail" class="contMainFormB">                 
+                 <label class="contMainFormA">Contraseña</label>
+                 <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contMainFormB">                 
+                <button class="contMainButton" type="submit" name="Enviar">CREAR CUENTA</button>
+            </form>
+
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
