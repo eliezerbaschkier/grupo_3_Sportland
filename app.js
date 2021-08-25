@@ -4,7 +4,7 @@ const routesIndex = require('./routes/index');
 const routesProducts = require('./routes/products');
 const routesUsers = require('./routes/users');
 const path = require('path');
-const publicPath = path.resolve(__dirname, './');
+const publicPath = path.join(__dirname, './public');
 
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs');

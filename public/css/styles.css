@@ -8,7 +8,7 @@
 /*------agregados por Christian----*/
 
 .Index{
-    background-image: url("/public/images/banner.jpg");
+    background-image: url("/images/banner.jpg");
     height: 100%;
     width: 100%;
     padding: 7%;
@@ -582,7 +582,7 @@ div.container-productDescription input {
 /*--------------agregado Christian------*/
 
 .Index{
-    background-image: url("/public/images/banner.jpg");
+    background-image: url("/images/banner.jpg");
     height: 1000px;
     width: 100%;
   
