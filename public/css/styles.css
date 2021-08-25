@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+#anchoSelector {
+    width : 60%;
+    align-self: center;
+}
 /*------agregados por Christian----*/
 
 .Index{

@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %>
 <body class="Site">
     <%- include('../partials/header') %>
     <main class="Site-content">
-        <p>Este es el formulario para editar producto</p>
+        <div class="contenedorMain">
+                      <h3>Cambiar datos de Producto</h3>  
+            <form class="contenedorMainForm" action="/" method="POST">
+                <label class="contMainFormA">Nombre del Producto</label>
+                 <input type="text" name="productName" placeholder="Nombre de producto" class="contMainFormB">                 
+                 <label class="contMainFormA">Descripción</label>
+                 <input type="text" name="productDescription" placeholder="Descripcion" class="contMainFormB">                 
+                 <label class="contMainFormA">Imagen</label>
+                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
+                 <label class="contMainFormA">Categoría</label>
+                 <select id="anchoSelector" name="category">
+                    <option value="Futbol">Fútbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>                 
+                 <label class="contMainFormA">Color</label>
+                 <input type="texto" name="color" placeholder="Color" class="contMainFormB">                 
+                 <label class="contMainFormA">Precio</label>
+                 <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
+                <button class="contMainButton" type="submit" name="Enviar">Guardar Cambios</button>
+            </form>
+
+        </div>
     </main>
     <%- include('../partials/footer') %>
 </body>
