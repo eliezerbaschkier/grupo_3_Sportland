@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+    <%- include('../partials/head') %>
 <body class="Site">
     <%- include('../partials/header') %>
     <main class="Site-content">
-        <p>Este es el formulario para crear producto</p>
+        <div class="contenedorMain">
+                      <h3>Formulario Alta de Producto</h3>  
+            <form class="contenedorMainForm" action="/" method="POST">
+                <label class="contMainFormA">Nombre del Producto</label>
+                 <input type="text" name="productName" placeholder="Nombre de producto" class="contMainFormB">                 
+                 <label class="contMainFormA">Descripcion</label>
+                 <input type="text" name="productDescription" placeholder="Descripcion" class="contMainFormB">                 
+                 <label class="contMainFormA">Imagen</label>
+                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
+                 <label class="contMainFormA">Categoria</label>
+                 <input type="option" name="category" placeholder="Categoria" class="contMainFormB">                 
+                 <label class="contMainFormA">Color</label>
+                 <input type="texto" name="color" placeholder="Color" class="contMainFormB">                 <label class="contMainFormA">Categoria</label>
+                 <label class="contMainFormA">Precio</label>
+                 <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
+                <button class="contMainButton" type="submit" name="Enviar">CREAR CUENTA</button>
+            </form>
+
+        </div>
     </main>
     <%- include('../partials/footer') %>
 </body>
