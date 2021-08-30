@@ -1,4 +1,9 @@
 const path = require('path');
+const fs = require('fs');
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath));
+const dotToComma = n => n.toString().replace(/\./, ",");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsControllers = {
     productDetail: (req,res) => {
@@ -18,7 +23,9 @@ const productsControllers = {
     
     editProduct: (req,res) => {
         let title = 'Editar producto';
-        res.render('./products/editProduct', {title: title});
+        let productId = req.params.id;
+        let productToEdit = products.filter(product => product.id === productId);
+        res.render('./products/editProduct', {title: title, productToEdit: productToEdit, toThousand: toThousand, dotToComma: dotToComma});
     }
 };
 

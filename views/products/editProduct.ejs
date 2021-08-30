@@ -5,25 +5,26 @@
     <%- include('../partials/header') %>
     <main class="Site-content">
         <div class="contenedorMain">
-                      <h3>Cambiar datos de Producto</h3>  
+                      <h3>Cambiar datos de Producto</h3>
             <form class="contenedorMainForm" action="/" method="POST">
                 <label class="contMainFormA">Nombre del Producto</label>
-                 <input type="text" name="productName" placeholder="Nombre de producto" class="contMainFormB">                 
+                 <input type="text" name="productName" placeholder="Nombre de producto" class="contMainFormB" value='<%= productToEdit[0].name %>'>                 
                  <label class="contMainFormA">Descripción</label>
-                 <input type="text" name="productDescription" placeholder="Descripcion" class="contMainFormB">                 
+                 <input type="text" name="productDescription" placeholder="Descripcion" class="contMainFormB" value='<%= productToEdit[0].description %>'>                 
                  <label class="contMainFormA">Imagen</label>
-                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
+                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB" value='<%= productToEdit[0].image %>'>                 
                  <label class="contMainFormA">Categoría</label>
                  <select id="anchoSelector" name="category">
-                    <option value="Futbol">Fútbol</option>
-                    <option value="Tenis">Tenis</option>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
+                    <% let options = ['Sin seleccionar','Hombre', 'Mujer', 'Niño', 'Equipamiento'] %>
+                    <% for ( i = 0 ; i < options.length ; i++) { %>
+                        <% let isSelected = (productToEdit[0].category == options[i]) ? 'selected' : ''; %>
+                        <option value="<%= options[i] %>" <%= isSelected %>> <%= options[i] %> </option>
+                    <% } %>
                 </select>                 
-                 <label class="contMainFormA">Color</label>
-                 <input type="texto" name="color" placeholder="Color" class="contMainFormB">                 
+                 <label class="contMainFormA">Talle</label>
+                 <input type="texto" name="color" placeholder="Color" class="contMainFormB" value='<%= productToEdit[0].size %>'>                 
                  <label class="contMainFormA">Precio</label>
-                 <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
+                 <input type="text" name="price" placeholder="Precio" class="contMainFormB" value='<%= toThousand(dotToComma(productToEdit[0].price)) %>'>                 
                 <button class="contMainButton" type="submit" name="Enviar">Guardar Cambios</button>
             </form>
 
