@@ -3,6 +3,8 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath));
 const dotToComma = n => n.toString().replace(/\./, ",");
+const commaToDot = n => n.toString().replace(/\,/, ".");
+const dotToEmpty = n => n.toString().replace(/\./, "");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsControllers = {
