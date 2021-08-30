@@ -25,7 +25,10 @@
                  <input type="texto" name="color" placeholder="Color" class="contMainFormB" value='<%= productToEdit[0].size %>'>                 
                  <label class="contMainFormA">Precio</label>
                  <input type="text" name="price" placeholder="Precio" class="contMainFormB" value='<%= productToEdit[0].price %>'>                 
-                <button class="contMainButton" type="submit" name="Enviar">Guardar Cambios</button>
+                <button class="contMainButton" type="submit" name="edit">Guardar Cambios</button>
+            </form>
+            <form action="/products/<%= productToEdit[0].id %>?_method=DELETE" method="POST">
+                <button class="contMainButton" type="submit" name="delete">Eliminar producto</button>
             </form>
 
         </div>

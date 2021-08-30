@@ -32,7 +32,6 @@ const productsControllers = {
 
     update: (req, res) => {
         let productId = req.params.id;
-        console.log(req.body);
         products.forEach(product => {
                 if(product.id === productId) {
                     product.name = req.body.name;
@@ -44,6 +43,14 @@ const productsControllers = {
             });
         let productsJSON = JSON.stringify(products);
         fs.writeFileSync(productsFilePath, productsJSON);
+        res.redirect('/'); //MODIFICAR EL REDIRECT CUANDO ESTÉ LA RUTA DE DETAIL
+    },
+
+    delete: (req, res) => {
+        let productId = req.params.id;
+        let productsUpdated = products.filter(product => product.id !== productId);
+        let productsUpdatedJSON = JSON.stringify(productsUpdated);
+        fs.writeFileSync(productsFilePath, productsUpdatedJSON);
         res.redirect('/'); //MODIFICAR EL REDIRECT CUANDO ESTÉ LA RUTA DE DETAIL
     }
 };
