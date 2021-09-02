@@ -4,12 +4,13 @@ const routesIndex = require('./routes/index');
 const routesProducts = require('./routes/products');
 const routesUsers = require('./routes/users');
 const path = require('path');
-const publicPath = path.join(__dirname, './public');
+const publicPath = path.join(__dirname, '../public');
 const methodOverride = require('method-override');
 
 app.use(express.static(publicPath));
 app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, '/views'));
 app.use(express.urlencoded({ extended : false}));
 app.use(express.json());
 

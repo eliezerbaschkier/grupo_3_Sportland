@@ -4,7 +4,7 @@
   "description": "Sportland es un ecommerce de artículos deportivos desarrollado por Christian Bogliotti, Gustavo Mei y Eliezer Baschkier. Se ofrecen distintos productos necesarios para la realización de actividad física para los distintos miembros de la familia (hombres, mujeres y niños).",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --ext js app.js",
+    "start": "nodemon --ext js ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "method-override": "^3.0.0"
+    "method-override": "^3.0.0",
+    "multer": "^1.4.3"
   }
 }
