@@ -6,13 +6,13 @@
     <main class="Site-content">
         <div class="contenedorMain">
                       <h3>Cambiar datos de Producto</h3>
-            <form class="contenedorMainForm" action="/products/<%= productToEdit[0].id %>?_method=PUT" method="POST">
+            <form class="contenedorMainForm" action="/products/<%= productToEdit[0].id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                 <label class="contMainFormA">Nombre del Producto</label>
                  <input type="text" id="name" name="name" placeholder="Nombre de producto" class="contMainFormB" value='<%= productToEdit[0].name %>'>                 
                  <label class="contMainFormA">Descripción</label>
                  <input type="text" name="description" placeholder="Descripcion" class="contMainFormB" value='<%= productToEdit[0].description %>'>                 
                  <label class="contMainFormA">Imagen</label>
-                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB" value='<%= productToEdit[0].image %>'>                 
+                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
                  <label class="contMainFormA">Categoría</label>
                  <select id="anchoSelector" name="category">
                     <% let categoryOptions = ['Sin seleccionar','Hombre', 'Mujer', 'Niño', 'Equipamiento'] %>

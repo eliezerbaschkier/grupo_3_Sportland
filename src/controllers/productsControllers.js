@@ -32,8 +32,7 @@ const productsControllers = {
 
     update: (req, res) => {
         let productId = req.params.id;
-        console.log(req.body);
-        products = JSON.parse(fs.readFileSync(productsFilePath));
+        let products = JSON.parse(fs.readFileSync(productsFilePath));
         products.forEach(product => {
             if(product.id === productId) {
                 product.name = req.body.name;
@@ -42,13 +41,13 @@ const productsControllers = {
                 product.size = req.body.size;
                 product.price = req.body.price;
                 if (req.file) {
-                    if (imagePath) {
-                        let indexProduct = products.findIndex(product => product.id === productId);
-                        let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
+                    let indexProduct = products.findIndex(product => product.id === productId);
+                    let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
                         fs.unlink(imagePath, function (err) {
-                            if (err) throw err;
+                            if (err) {
+                                console.log('Could not delete file');
+                            };
                         });
-                    }
                     product.image = req.file.filename;
                 }
             }
@@ -60,9 +59,16 @@ const productsControllers = {
 
     delete: (req, res) => {
         let productId = req.params.id;
-        products = JSON.parse(fs.readFileSync(productsFilePath));
+        let products = JSON.parse(fs.readFileSync(productsFilePath));
+        let indexProduct = products.findIndex(product => product.id === productId);
+        let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
+        fs.unlink(imagePath, function (err) {
+            if (err) {
+                console.log('Could not delete file');
+            };
+        });
         let productsUpdated = products.filter(product => product.id !== productId);
-        let productsUpdatedJSON = JSON.stringify(productsUpdated);
+        let productsUpdatedJSON = JSON.stringify(productsUpdated, null, ' ');
         fs.writeFileSync(productsFilePath, productsUpdatedJSON);
         res.redirect('/'); //MODIFICAR EL REDIRECT CUANDO ESTÉ LA RUTA DE DETAIL
     }
