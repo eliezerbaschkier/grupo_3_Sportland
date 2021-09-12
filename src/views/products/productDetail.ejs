@@ -5,14 +5,14 @@
     <%- include('../partials/header') %>
     <main class="Site-content">
         <div class="container-productDetail">
-            <h3>Información de producto</h3>
+            <h3>Información de producto </h3>
             <div class="container-imgAndproductDescription">
                 <div class="container-img">
-                    <img src="/images/products/camiseta-SMTUC.jpg" alt="Camiseta de San Martín de Tucumán">
+                    <img src="/<%=productToShowInDetail.image %>" alt="<%=productToShowInDetail.image%>">
                 </div>
                 <div class="container-productDescription">
-                    <h4>Camiseta de San Martín de Tucumán</h4>
-                    <p>$ 3.000</p>
+                    <h4><%=productToShowInDetail.description%></h4>
+                    <p>$<%=productToShowInDetail.price%></p>
                     <form action="/productCart" method="POST">
                         <input type="number" name="quantity" id="quantity" placeholder="Cantidad">
                         <button type="submit">Agregar al carrito</button>

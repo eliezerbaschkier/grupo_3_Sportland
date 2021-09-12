@@ -1,4 +1,63 @@
 [
+    {
+        "id": "1",
+        "name": "Bicicleta Fija",
+        "description": "Bicicleta Fija",
+        "price": 56500,
+        "image": "images/products/bicicleta_fija.png",
+        "category": "GYM",
+        "keywords": [
+         "GYM",
+         "hym"
+        ],
+        "size": "unique",
+        "flag": "visited"
+            
+       },
+       {
+        "id": "2",
+        "name": "Mancuernas recubiertas de 3kg",
+        "description": "Mancuernas recubiertas de 3kg",
+        "price": 6000,
+        "image": "images/products/mancuerna_naranja.png",
+        "category": "GYM",
+        "keywords": [
+         "GYM",
+         "hym"
+        ],
+        "size": "unique",
+        "flag": "visited"
+        },
+    
+       {
+        "id": "3",
+        "name": "Bandas Circulares",
+        "description": "Cintas Circulares",
+        "price": 1600,
+        "image": "images/products/bandas_circulares.JPG",
+        "category": "GYM",
+        "keywords": [
+         "GYM",
+         "hym"
+        ],
+        "size": "unique",
+        "flag": "visited"
+        },
+       {
+        "id": "4",
+        "name": "Cinta de correr",
+        "description": "Maquina de Correr",
+        "price": 61000,
+        "image": "images/products/cinta_de_correr.png",
+        "category": "GYM",
+        "keywords": [
+         "GYM",
+         "hym"
+        ],
+        "size": "unique",
+        "flag": "visited"
+          },
+
  {
   "id": "379602484-X",
   "name": "Nike Air Max Pre-Day",
@@ -11,7 +70,8 @@
    "Juliett"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "340876971-0",
   "name": "LeBron 18 Low Summer",
@@ -24,7 +84,8 @@
    "Zulu"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "669839906-X",
   "name": "Nike Air Max Pre-Day",
@@ -37,7 +98,8 @@
    "Uniform"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "567462935-8",
   "name": "Nike Air Max Pre-Day",
@@ -53,7 +115,8 @@
    "India"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "977968182-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -68,7 +131,8 @@
    "Tango"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "010310767-3",
   "name": "LeBron 18 Low Summer",
@@ -81,7 +145,8 @@
    "Foxtrot"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "765733278-6",
   "name": "Nike Air Max Pre-Day",
@@ -96,7 +161,8 @@
    "Tango"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "147154387-0",
   "name": "Nike Canyon",
@@ -110,7 +176,8 @@
    "Bravo"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "809192400-3",
   "name": "Nike Air Max Pre-Day",
@@ -124,7 +191,8 @@
    "Victor"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "844201349-0",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -139,7 +207,8 @@
    "Echo"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "056838126-2",
   "name": "Nike Canyon",
@@ -154,7 +223,8 @@
    "India"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "041022763-3",
   "name": "LeBron 18 Low Summer",
@@ -168,7 +238,8 @@
    "Hotel"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "196922443-6",
   "name": "Nike Air Max Pre-Day",
@@ -183,7 +254,8 @@
    "Juliett"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "332836860-4",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -196,7 +268,8 @@
    "Uniform"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "804512674-4",
   "name": "Nike Air Max Pre-Day",
@@ -210,7 +283,8 @@
    "Zulu"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "880842784-6",
   "name": "LeBron 18 Low Summer",
@@ -223,7 +297,8 @@
    "Delta"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "004304434-4",
   "name": "Nike Air Max Pre-Day",
@@ -239,7 +314,8 @@
    "Juliett"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "202473469-3",
   "name": "LeBron 18 Low Summer",
@@ -254,7 +330,8 @@
    "India"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "062811108-8",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -267,7 +344,8 @@
    "Hotel"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "844917272-1",
   "name": "Nike Air Max Pre-Day",
@@ -280,7 +358,8 @@
    "Charlie"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "412408635-0",
   "name": "Nike Canyon",
@@ -295,7 +374,8 @@
    "Yankee"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "438694130-4",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -309,7 +389,8 @@
    "Tango"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "889780893-X",
   "name": "Nike Air Max Pre-Day",
@@ -324,7 +405,8 @@
    "Lima"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "262387457-3",
   "name": "Nike Air Max Pre-Day",
@@ -339,7 +421,8 @@
    "Yankee"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "161106461-9",
   "name": "Nike Canyon",
@@ -352,7 +435,8 @@
    "Mike"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "659018183-7",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -366,7 +450,8 @@
    "Papa"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "438570949-1",
   "name": "Nike Air Max Pre-Day",
@@ -382,7 +467,8 @@
    "Lima"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "285494845-9",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -397,7 +483,8 @@
    "Quebec"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "746643674-9",
   "name": "LeBron 18 Low Summer",
@@ -413,7 +500,8 @@
    "Mike"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "290442164-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -427,7 +515,8 @@
    "Tango"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "142688918-6",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -441,7 +530,8 @@
    "Delta"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "552057262-3",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -455,7 +545,8 @@
    "Sierra"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "970499946-1",
   "name": "LeBron 18 Low Summer",
@@ -470,7 +561,8 @@
    "Juliett"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "651547089-4",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -486,7 +578,8 @@
    "Lima"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "174880160-0",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -499,7 +592,8 @@
    "Oscar"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "197600934-0",
   "name": "LeBron 18 Low Summer",
@@ -513,7 +607,8 @@
    "Foxtrot"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "410373415-9",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -529,7 +624,8 @@
    "Sierra"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "341810961-6",
   "name": "Nike Canyon",
@@ -545,7 +641,8 @@
    "Quebec"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "162747521-4",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -561,7 +658,8 @@
    "Charlie"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "041010965-7",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -576,7 +674,8 @@
    "Echo"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "121190309-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -592,7 +691,8 @@
    "Sierra"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "921833281-3",
   "name": "Nike Canyon",
@@ -606,7 +706,8 @@
    "Golf"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "797960028-2",
   "name": "Nike Canyon",
@@ -619,7 +720,8 @@
    "Delta"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "063420405-X",
   "name": "LeBron 18 Low Summer",
@@ -633,7 +735,8 @@
    "Charlie"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "035259579-5",
   "name": "Nike Air Max Pre-Day",
@@ -646,7 +749,8 @@
    "Alfa"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "583920825-6",
   "name": "Nike Air Max Pre-Day",
@@ -659,7 +763,8 @@
    "Zulu"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "202461746-8",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -675,7 +780,8 @@
    "Romeo"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "238131433-4",
   "name": "Nike Air Max Pre-Day",
@@ -690,7 +796,8 @@
    "India"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "190289230-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -704,7 +811,8 @@
    "Tango"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "007028495-4",
   "name": "Nike Air Max Pre-Day",
@@ -720,7 +828,8 @@
    "X-ray"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "614698816-2",
   "name": "Nike Canyon",
@@ -734,7 +843,8 @@
    "Lima"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "621778784-9",
   "name": "LeBron 18 Low Summer",
@@ -749,7 +859,8 @@
    "Golf"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "190666890-6",
   "name": "LeBron 18 Low Summer",
@@ -764,7 +875,8 @@
    "Alfa"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "885119968-X",
   "name": "LeBron 18 Low Summer",
@@ -779,7 +891,8 @@
    "X-ray"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "474604180-6",
   "name": "Nike Air Max Pre-Day",
@@ -792,7 +905,8 @@
    "Oscar"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "084546310-1",
   "name": "Nike Air Max Pre-Day",
@@ -805,7 +919,8 @@
    "Lima"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "296131543-3",
   "name": "Nike Air Max Pre-Day",
@@ -820,7 +935,8 @@
    "India"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "442626516-9",
   "name": "Nike Canyon",
@@ -835,7 +951,8 @@
    "Juliett"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "380109125-2",
   "name": "LeBron 18 Low Summer",
@@ -851,7 +968,8 @@
    "Alfa"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "526923430-0",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -867,7 +985,8 @@
    "Tango"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "170145347-9",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -882,7 +1001,8 @@
    "Delta"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "590574377-0",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -897,7 +1017,8 @@
    "Whiskey"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "679157180-2",
   "name": "Nike Canyon",
@@ -911,7 +1032,8 @@
    "Oscar"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "915044123-X",
   "name": "Nike Canyon",
@@ -927,7 +1049,8 @@
    "November"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "631757856-7",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -942,7 +1065,8 @@
    "Bravo"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "121428157-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -957,7 +1081,8 @@
    "Mike"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "852882169-2",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -970,7 +1095,8 @@
    "Victor"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "732701628-7",
   "name": "Nike Canyon",
@@ -983,7 +1109,8 @@
    "Lima"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "753764521-3",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -998,7 +1125,8 @@
    "X-ray"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "092378938-3",
   "name": "Nike Air Max Pre-Day",
@@ -1013,7 +1141,8 @@
    "November"
   ],
   "size": "2XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "691907212-2",
   "name": "LeBron 18 Low Summer",
@@ -1028,7 +1157,8 @@
    "Echo"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "400069538-X",
   "name": "Nike Air Max Pre-Day",
@@ -1043,7 +1173,8 @@
    "Juliett"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "438053610-6",
   "name": "Nike Canyon",
@@ -1057,7 +1188,8 @@
    "Charlie"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "518638153-5",
   "name": "Nike Canyon",
@@ -1070,7 +1202,8 @@
    "Quebec"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "520751911-5",
   "name": "Nike Canyon",
@@ -1083,7 +1216,8 @@
    "Romeo"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "991594536-1",
   "name": "Nike Air Max Pre-Day",
@@ -1099,7 +1233,8 @@
    "Charlie"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "229122813-7",
   "name": "Nike Air Max Pre-Day",
@@ -1112,7 +1247,8 @@
    "Bravo"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "873795067-3",
   "name": "LeBron 18 Low Summer",
@@ -1125,7 +1261,8 @@
    "Sierra"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "578479397-7",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -1138,7 +1275,8 @@
    "Echo"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "236269906-4",
   "name": "Nike Canyon",
@@ -1151,7 +1289,8 @@
    "Foxtrot"
   ],
   "size": "XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "423228117-7",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -1165,7 +1304,8 @@
    "Bravo"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "206427965-2",
   "name": "LeBron 18 Low Summer",
@@ -1181,7 +1321,8 @@
    "Romeo"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "746239520-7",
   "name": "Nike Canyon",
@@ -1196,7 +1337,8 @@
    "Uniform"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "074305731-7",
   "name": "LeBron 18 Low Summer",
@@ -1210,7 +1352,8 @@
    "Victor"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "845616126-8",
   "name": "Nike Canyon",
@@ -1226,7 +1369,8 @@
    "Quebec"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "058588428-5",
   "name": "Nike Canyon",
@@ -1241,7 +1385,8 @@
    "Quebec"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "014157962-5",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -1257,7 +1402,8 @@
    "Charlie"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "251182807-3",
   "name": "Nike Air Max Pre-Day",
@@ -1273,7 +1419,8 @@
    "Victor"
   ],
   "size": "S"
- },
+        , "flag": "null"
+       },
  {
   "id": "577038867-6",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -1287,7 +1434,8 @@
    "Hotel"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "315434077-7",
   "name": "Nike Canyon",
@@ -1303,7 +1451,8 @@
    "Charlie"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "445493041-4",
   "name": "Nike Phantom GT Elite Dynamic",
@@ -1319,7 +1468,8 @@
    "Papa"
   ],
   "size": "3XL"
- },
+        , "flag": "null"
+       },
  {
   "id": "783373610-4",
   "name": "Nike Canyon",
@@ -1332,7 +1482,8 @@
    "Juliett"
   ],
   "size": "XS"
- },
+        , "flag": "null"
+       },
  {
   "id": "340308691-7",
   "name": "Nike Air Max Pre-Day",
@@ -1345,7 +1496,8 @@
    "Bravo"
   ],
   "size": "L"
- },
+        , "flag": "null"
+       },
  {
   "id": "741868090-2",
   "name": "Nike Air Max Pre-Day",
@@ -1359,7 +1511,8 @@
    "Victor"
   ],
   "size": "M"
- },
+        , "flag": "null"
+       },
  {
   "id": "440238132-0",
   "name": "LeBron 18 Low Summer",

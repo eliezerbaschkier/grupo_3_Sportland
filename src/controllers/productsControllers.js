@@ -9,7 +9,18 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsControllers = {
     productDetail: (req,res) => {
         let title = 'Detalle de producto';
-        res.render('./products/productDetail', {title: title});
+        let products = JSON.parse(fs.readFileSync(productsFilePath));
+        let productId = req.params.id;
+        let productToShowInDetail = products.filter( i  => i.id == productId);
+
+        console.log("ID:");
+        console.log(productId);
+        console.log("precio:");
+        console.log(productToShowInDetail.price);
+        console.log(productToShowInDetail[0]);
+
+        res.render('./products/productDetail', {title: title, productId: productId, productToShowInDetail: productToShowInDetail[0] });
+
     },
 
     productCart: (req,res) => {
