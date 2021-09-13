@@ -6,26 +6,30 @@
     <main class="Site-content">
         <div class="contenedorMain">
                       <h3>Formulario Alta de Producto</h3>  
-            <form class="contenedorMainForm" action="/" method="POST">
+            <form class="contenedorMainForm" action="/products" method="POST" enctype="multipart/form-data">
                 <label class="contMainFormA">Nombre del Producto</label>
-                 <input type="text" name="productName" placeholder="Nombre de producto" class="contMainFormB">                 
+                 <input type="text" id="name" name="name" placeholder="Nombre de producto" class="contMainFormB" >                 
                  <label class="contMainFormA">Descripción</label>
-                 <input type="text" name="productDescription" placeholder="Descripcion" class="contMainFormB">                 
+                 <input type="text" name="description" placeholder="Descripcion" class="contMainFormB">                 
                  <label class="contMainFormA">Imagen</label>
                  <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
                  <label class="contMainFormA">Categoría</label>
                  <select id="anchoSelector" name="category">
-                     <option value="Futbol">Fútbol</option>
-                     <option value="Tenis">Tenis</option>
-                     <option value="Hombre">Hombre</option>
-                     <option value="Mujer">Mujer</option>
-                 </select>                 
-                 <!--<input type="option" name="category" placeholder="Categoria" class="contMainFormB">-->                 
-                 <label class="contMainFormA">Color</label>
-                 <input type="texto" name="color" placeholder="Color" class="contMainFormB">                 
+                    <% let categoryOptions = ['Sin seleccionar','Hombre', 'Mujer', 'Niño', 'Equipamiento'] %>
+                    <% for ( i = 0 ; i < categoryOptions.length ; i++) { %>
+                        <option value="<%= categoryOptions[i] %>"> <%= categoryOptions[i] %> </option>
+                    <% } %>
+                </select>   
+                <label class="contMainFormA">Talle</label>              
+                <select id="anchoSelector" name="size">
+                    <% let sizeOptions = ['Sin seleccionar','XS', 'S', 'M', 'L', 'XL'] %>
+                    <% for ( i = 0 ; i < sizeOptions.length ; i++) { %>
+                        <option value="<%= sizeOptions[i] %>"> <%= sizeOptions[i] %> </option>
+                    <% } %>
+                </select>                 
                  <label class="contMainFormA">Precio</label>
                  <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
-                <button class="contMainButton" type="submit" name="Enviar">Cargar Producto</button>
+                <button class="contMainButton" type="submit" name="Enviar">Crear Producto</button>
             </form>
 
         </div>

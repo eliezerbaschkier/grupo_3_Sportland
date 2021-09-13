@@ -20,7 +20,7 @@
 
        
         <div class="cajaGrande">
-            <img src="<%=prod.image %>" alt="">
+            <img src="/images/products/<%=prod.image %>" alt="<%= prod.name %>">
             
     
             <div class="cajaChica">   
@@ -32,7 +32,7 @@
                     <p class="descuentos">20% OFF</p></div>
                     <div class="renglonAbajo"> 
                         <a href="/products/detail/<%= prod.id %>">
-                            <p class="descripciones"><%= prod.description %></p></div>
+                            <p class="descripciones"><%= prod.name %></p></div>
                         </a>
                 </div>
     
@@ -45,12 +45,12 @@
           </div>
        
 
-<%	}) %>
+    <%	}) %>
 
 
     <!-------FIN CICLO -->
 
-<!-------------------------------------------------------------OFERTAS ESPECIALES---------> 
+    <!-------------------------------------------------------------OFERTAS ESPECIALES---------> 
      <!----------------------------------------------------------------------------------->  
      <p class="titulo">Ofertas</p>
      <div class="contenedor">
@@ -59,7 +59,7 @@
     <% productosVisitados.forEach(function(prod){ %>
 
         <div class="cajaGrande">
-            <img src="<%=prod.image %>" alt="">
+            <img src="/images/products/<%=prod.image %>" alt="<%= prod.name %>">
     
             <div class="cajaChica">   
                        
@@ -80,7 +80,7 @@
             </div>
           </div>
 
-<%	}) %>
+    <%	}) %>
 
 
     <!-------FIN CICLO -->
