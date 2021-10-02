@@ -8,7 +8,8 @@
             <form class="contLoginForm" action="/users/login" method="POST">                
                 <div class="contenedorCampoLogin">
                     <label class="contLoginFormA">E-Mail</label>
-                    <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB">                 
+                    <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB"> 
+                    <input type="checkbox" name="remember_user">Recordar mi usuario            
                     <% if (locals.errors && errors.email) { %>
                     <div class="mensaje-error">
                         <%= errors.email.msg %>
@@ -16,7 +17,7 @@
                     <% } %>
                     
                     <label class="contLoginFormA">Contraseña</label>
-                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contLoginFormB">       
+                     <input type="password" name="password" placeholder="Ingresa tu contraseña" class="contLoginFormB">       
 
                      <button type="submit" class="contLoginFormC" name="ingresa">INGRESÁ</button> 
                      <a href="/users/login">Olvidé mi contraseña</a>
