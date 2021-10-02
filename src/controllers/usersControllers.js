@@ -1,10 +1,23 @@
 const path = require('path');
+const User = require('../models/User');
 
 const usersControllers = {
     login: (req,res) => {
         let title = 'Ingresá';
         res.render('users/login', {title: title});
     },
+
+    
+    loginProcess: (req, res) => {
+let userToLogin = User.findByField('email',req.body.email);
+
+console.log(userToLogin);
+return res.send(userToLogin);
+
+    
+    },
+
+
 
     register: (req,res) => {
         let title = 'Registrate';
@@ -13,3 +26,5 @@ const usersControllers = {
 };
 
 module.exports = usersControllers;
+
+
