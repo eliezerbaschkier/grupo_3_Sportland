@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.mensaje-error{
+    color: red;
+    text-align: center;
+}
+
 #anchoSelector {
     width : 60%;
     align-self: center;

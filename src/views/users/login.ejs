@@ -9,6 +9,12 @@
                 <div class="contenedorCampoLogin">
                     <label class="contLoginFormA">E-Mail</label>
                     <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB">                 
+                    <% if (locals.errors && errors.email) { %>
+                    <div class="mensaje-error">
+                        <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                    
                     <label class="contLoginFormA">Contraseña</label>
                      <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contLoginFormB">       
 

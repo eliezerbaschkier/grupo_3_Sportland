@@ -9,10 +9,28 @@ const usersControllers = {
 
     
     loginProcess: (req, res) => {
+        let title = 'Ingresá';
 let userToLogin = User.findByField('email',req.body.email);
 
-console.log(userToLogin);
-return res.send(userToLogin);
+//si se encuentra el mail ingresado en la base de datos
+if(userToLogin) {
+
+    return res.send(userToLogin);
+
+}
+
+//si no se encuentra el usuario en la base de datos
+return res.render('users/login', {title: title,
+    errors: {
+        email: {
+            msg: 'No se encuentra este email en nuestra base de datos'
+        }
+    }
+});
+
+
+
+//return res.send(userToLogin);
 
     
     },
