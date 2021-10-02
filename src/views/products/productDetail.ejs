@@ -8,7 +8,7 @@
             <h3>Información de producto </h3>
             <div class="container-imgAndproductDescription">
                 <div class="container-img">
-                    <img src="/<%=productToShowInDetail.image %>" alt="<%=productToShowInDetail.image%>">
+                    <img src="/images/products//<%=productToShowInDetail.image %>" alt="<%=productToShowInDetail.image%>">
                 </div>
                 <div class="container-productDescription">
                     <h4><%=productToShowInDetail.description%></h4>
@@ -17,6 +17,7 @@
                         <input type="number" name="quantity" id="quantity" placeholder="Cantidad">
                         <button type="submit">Agregar al carrito</button>
                     </form>
+                    <a href="/products/<%=productToShowInDetail.id%>/edit">Editar/eliminar producto</a>
                 </div>
             </div>
         </div>
