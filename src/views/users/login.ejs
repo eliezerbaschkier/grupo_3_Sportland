@@ -5,14 +5,16 @@
     <%- include('../partials/header') %>
     <main class="Site-content" class="contenedorLogin">
         <h2 class="ingresaTuCuenta">Ingresá a tu cuenta</h2>
-            <form class="contLoginForm" action="/" method="POST">                
+            <form class="contLoginForm" action="/users/login" method="POST">                
                 <div class="contenedorCampoLogin">
                     <label class="contLoginFormA">E-Mail</label>
                     <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB">                 
                     <label class="contLoginFormA">Contraseña</label>
-                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contLoginFormB">                 
+                     <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contLoginFormB">       
+
                      <button type="submit" class="contLoginFormC" name="ingresa">INGRESÁ</button> 
-                     <a href="#">Olvidé mi contraseña</a>
+                     <a href="/users/login">Olvidé mi contraseña</a>
+
                      <label for="RecordarUsuarioYContraseña">Recordar usuario y contraseña</label>
                      <p class="contenedorAunNoTenesCuenta">¿Aún no tenés cuenta?</p>
                     <a href="/register" class="contLoginFormD"><i class="fas fa-id-card"></i>Registrate</a>

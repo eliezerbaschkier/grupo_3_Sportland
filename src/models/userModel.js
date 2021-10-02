@@ -1,9 +1,12 @@
-// 4. Editar la información de un usuario
+//Modelo para interactuar con el JSON de usuarios
 
 const fs = require('fs');
 
+const path = require('path');
+const productsFilePath = path.join(__dirname, '../data/users.json');
+
 const User = {
-	fileName: './data/users.json',
+	fileName: productsFilePath,
 
 	getData: function () {
 		return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
