@@ -1,21 +1,10 @@
-[{"id":1,"first_name":"Theressa","last_name":"Drache","email":"tdrache0@quantcast.com","password":"E7PtWVQH","category":"admin","image":"user_1.jpg"},
-{"id":2,"first_name":"Wesley","last_name":"Doran","email":"wdoran1@microsoft.com","password":"lcsXyDX3tck","category":"admin","image":"user_2.jpg"},
-{"id":3,"first_name":"Anselm","last_name":"Reddle","email":"areddle2@cloudflare.com","password":"b3Dss5adhiN","category":"admin","image":"user_3.jpg"},
-{"id":4,"first_name":"Diane-marie","last_name":"Hansemann","email":"dhansemann3@answers.com","password":"KRcBqTT4W","category":"admin","image":"user_4.jpg"},
-{"id":5,"first_name":"Suzy","last_name":"Noel","email":"snoel4@rambler.ru","password":"xSdUnM","category":"admin","image":"user_5.jpg"},
-{"id":6,"first_name":"Mil","last_name":"Upex","email":"mupex5@mail.ru","password":"ml15zQclB","category":"user","image":"user_6.jpg"},
-{"id":7,"first_name":"Calypso","last_name":"Dring","email":"cdring6@acquirethisname.com","password":"fcNRp5","category":"user","image":"user_7.jpg"},
-{"id":8,"first_name":"Annecorinne","last_name":"Castellucci","email":"acastellucci7@livejournal.com","password":"unPaLydGT","category":"admin","image":"user_8.jpg"},
-{"id":9,"first_name":"Adrien","last_name":"Elwyn","email":"aelwyn8@state.gov","password":"vMjkVqla","category":"user","image":"user_9.jpg"},
-{"id":10,"first_name":"Stephani","last_name":"Belfrage","email":"sbelfrage9@craigslist.org","password":"WBCxPx","category":"admin","image":"user_10.jpg"},
-{"id":11,"first_name":"Maximilien","last_name":"Opdenort","email":"mopdenorta@uiuc.edu","password":"rr4PfKkf","category":"admin","image":"user_11.jpg"},
-{"id":12,"first_name":"Chris","last_name":"Derell","email":"cderellb@ft.com","password":"MSvE4m2eyw","category":"admin","image":"user_12.jpg"},
-{"id":13,"first_name":"Tome","last_name":"Rossander","email":"trossanderc@hibu.com","password":"wEBlZQC3m","category":"user","image":"user_13.jpg"},
-{"id":14,"first_name":"Porter","last_name":"Rampling","email":"pramplingd@bluehost.com","password":"5r9iMx","category":"user","image":"user_14.jpg"},
-{"id":15,"first_name":"Amil","last_name":"Linster","email":"alinstere@drupal.org","password":"03t5ebg3","category":"admin","image":"user_15.jpg"},
-{"id":16,"first_name":"Andria","last_name":"Abley","email":"aableyf@soup.io","password":"PPsEWVKto","category":"user","image":"user_16.jpg"},
-{"id":17,"first_name":"Allianora","last_name":"Polini","email":"apolinig@webnode.com","password":"R8ufgEmK40ky","category":"user","image":"user_17.jpg"},
-{"id":18,"first_name":"Massimiliano","last_name":"Pattison","email":"mpattisonh@flickr.com","password":"AFwz4Yp8","category":"user","image":"user_18.jpg"},
-{"id":19,"first_name":"Vida","last_name":"Biagi","email":"vbiagii@google.cn","password":"KX9nvEDKb1M","category":"user","image":"user_19.jpg"},
-{"id":20,"first_name":"Adolph","last_name":"Chatan","email":"achatanj@discovery.com","password":"9EzgMozv","category":"user","image":"user_20.jpg"},
-{"id":21,"first_name":"Hola","last_name":"Mundo","email":"hola@hola.com","password":"1","category":"user","image":"user_20.jpg"}]
+[
+ {
+  "id": 1,
+  "first_name": "sasa",
+  "last_name": "dd",
+  "email": "a@b.com",
+  "password": "$2a$10$.TmG7UbBFJ439ds01nkcO.f2U1.bgUlJN5PEp6O98lE1kmI6lXwLS",
+  "image": "user-1633282722270.png"
+ }
+]

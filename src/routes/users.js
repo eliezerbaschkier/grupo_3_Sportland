@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const usersControllers = require('../controllers/usersControllers');
+const upload = require('../middlewares/usersImageMW');
+const validations = require('../middlewares/registerValidationsMW');
 
 //const {body} = require('express-validator');//gregado cb
 
@@ -17,6 +19,7 @@ router.get('/login', usersControllers.login);
 router.post('/login', usersControllers.loginProcess);
 
 router.get('/register', usersControllers.register);
+router.post('/register', upload.single('image'), validations, usersControllers.processRegister);
 
 module.exports = router;
 

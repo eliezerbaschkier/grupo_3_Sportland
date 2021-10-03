@@ -500,6 +500,10 @@ div.container-productDescription input {
     padding-bottom: 3%;
 }
 
+.error {
+    color: red;
+}
+
 .contMainFormB{
     margin-left: 20%;
     border-radius: 5px;

@@ -11,18 +11,64 @@
                 <p class="contMainNavA">¿Ya tenes una cuenta?</p>
                 <p class="contMainNavA">|</p>
                 <a href="/login" class="contMainNavA">Ingresá</a>
-            </div>
+            </div>            
             
-            <form class="contenedorMainForm" action="/" method="POST">
+            <form class="contenedorMainForm" action="/users/register" method="POST" enctype="multipart/form-data">
                 <label class="contMainFormA">Nombre</label>
-                 <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="contMainFormB">                 
-                 <label class="contMainFormA">Apellido</label>
-                 <input type="text" name="apellido" placeholder="Ingresa tu apellido" class="contMainFormB">                 
-                 <label class="contMainFormA">E-Mail</label>
-                 <input type="email" name="E-Mail" placeholder="Ingresa tu E-Mail" class="contMainFormB">                 
-                 <label class="contMainFormA">Contraseña</label>
-                 <input type="password" name="contraseña" placeholder="Ingresa tu contraseña" class="contMainFormB">                 
-                <button class="contMainButton" type="submit" name="Enviar">CREAR CUENTA</button>
+                <input
+                    type="text"
+                    name="first_name"
+                    placeholder="Ingresa tu nombre"
+                    class="contMainFormB"
+                    value="<%= (locals.oldData && oldData.first_name) ? oldData.first_name : '' %>"
+                > 
+                <% if (locals.errors && errors.first_name) { %>
+                        <p class="contMainFormA error"><%= errors.first_name.msg %>  </p>
+                <% } %>              
+                <label class="contMainFormA">Apellido</label>
+                <input
+                    type="text"
+                    name="last_name"
+                    placeholder="Ingresa tu apellido"
+                    class="contMainFormB"
+                    value="<%= (locals.oldData && oldData.last_name) ? oldData.last_name : '' %>"
+                > 
+                <% if (locals.errors && errors.last_name) { %>
+                    <p class="contMainFormA error"><%= errors.last_name.msg %>  </p>
+                <% } %>                
+                <label class="contMainFormA">E-Mail</label>
+                <input
+                    type="text"
+                    name="email"
+                    placeholder="Ingresa tu E-Mail"
+                    class="contMainFormB"
+                    value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>"
+
+                >
+                <% if (locals.errors && errors.email) { %>
+                    <p class="contMainFormA error"><%= errors.email.msg %>  </p>
+                <% } %>                 
+                <label class="contMainFormA">Contraseña</label>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Ingresa tu contraseña"
+                    class="contMainFormB"
+                >
+                <% if (locals.errors && errors.password) { %>
+                    <p class="contMainFormA error"><%= errors.password.msg %>  </p>
+                <% } %>
+                <label class="contMainFormA">Imagen</label>
+                <input
+                    type="file"
+                    name="image"
+                    placeholder="Imagen"
+                    class="contMainFormB"
+                >  
+                <% if (locals.errors && errors.image) { %>
+                    <p class="contMainFormA error"><%= errors.image.msg %>  </p>
+                <% } %>                  
+                <button class="contMainButton" type="submit">CREAR CUENTA</button>
             </form>
 
         </div>
