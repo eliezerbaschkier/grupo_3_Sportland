@@ -1,10 +1,11 @@
 [
  {
   "id": 1,
-  "first_name": "sasa",
-  "last_name": "dd",
-  "email": "a@b.com",
-  "password": "$2a$10$.TmG7UbBFJ439ds01nkcO.f2U1.bgUlJN5PEp6O98lE1kmI6lXwLS",
-  "image": "user-1633282722270.png"
+  "first_name": "Leo",
+  "last_name": "Messi",
+  "email": "leo@messi.psg",
+  "password": "$2a$10$AXuN3Nmw3Rng6mbN0eeLzeFsv8Vhvj8m9Oa7/VHQU1TawWziOxiaa",
+  "image": "user-1633362048355.jpeg",
+  "category": "client"
  }
 ]
