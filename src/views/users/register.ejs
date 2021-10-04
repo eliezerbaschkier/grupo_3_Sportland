@@ -47,7 +47,9 @@
                 >
                 <% if (locals.errors && errors.email) { %>
                     <p class="contMainFormA error"><%= errors.email.msg %>  </p>
-                <% } %>                 
+                <% } %>  
+                
+                
                 <label class="contMainFormA">Contraseña</label>
                 <input
                     type="password"
@@ -58,6 +60,19 @@
                 <% if (locals.errors && errors.password) { %>
                     <p class="contMainFormA error"><%= errors.password.msg %>  </p>
                 <% } %>
+
+                <label class="contMainFormA">Confirmar contraseña</label>
+                <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirmá tu contraseña"
+                    class="contMainFormB"
+                >
+                <% if (locals.errors && errors.confirmPassword) { %>
+                    <p class="contMainFormA error"><%= errors.confirmPassword.msg %>  </p>
+                <% } %>
+
+
                 <label class="contMainFormA">Imagen</label>
                 <input
                     type="file"

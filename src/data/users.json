@@ -7,5 +7,15 @@
   "password": "$2a$10$AXuN3Nmw3Rng6mbN0eeLzeFsv8Vhvj8m9Oa7/VHQU1TawWziOxiaa",
   "image": "user-1633362048355.jpeg",
   "category": "client"
+ },
+ {
+  "id": 2,
+  "first_name": "Cristiano",
+  "last_name": "Ronaldo",
+  "email": "cr7@cr7.com",
+  "password": "$2a$10$YpJm451QYXfsuT.LfQkDN.gqZbo/DCy7o6yvzcq9DYS2wrBfx/8ym",
+  "confirmPassword": null,
+  "image": "user-1633364055545.jpg",
+  "category": "client"
  }
 ]

@@ -108,7 +108,8 @@ const usersControllers = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
 			image: req.file.filename,
-            category: 'client'
+            category: 'client',
+            confirmPassword: null,
 		}
 
 		let userCreated = User.create(userToCreate);

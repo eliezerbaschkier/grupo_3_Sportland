@@ -8,6 +8,15 @@ const validations = [
         .notEmpty().withMessage('Por favor escribe tu email').bail()
         .isEmail().withMessage('Por favor escribe un formato válido de email'),
     body('password').notEmpty().withMessage('Por favor escribe una contraseña'),
+    body('confirmPassword').notEmpty().withMessage('Por favor confirma la contraseña').bail()
+        .custom((value, { req }) => {
+            console.log(req.body);
+            console.log(req.body.confirmPassword !== req.body.password);
+            if (req.body.confirmPassword !== req.body.password) {
+                throw new Error('Las contraseñas no coinciden');
+            }
+            return true;
+        }),
     body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
@@ -19,7 +28,6 @@ const validations = [
                 throw new Error(`Los formatos permitidos son ${acceptedExtensions.join(', ')}`);
             }
         }
-
         return true;
     })
 
