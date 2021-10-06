@@ -582,6 +582,12 @@ div.container-productDescription input {
         transition: all 500ms;
     }
 
+    .nav-bar .profile-pic {
+        width: 4vw;
+        height: auto;
+        border-radius: 15px;
+    }
+
     /*Footer*/
 
     .container-main-footer h4 {

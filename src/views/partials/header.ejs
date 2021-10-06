@@ -11,10 +11,11 @@
         <input type="text" name="search" placeholder="Buscar productos">
         <button type="submit"><i class="fas fa-search"></i></button>
     </form>
+    <% if (locals.isLogged) { %> 
     <a href="/users/profile" class="login-hide">    
         <div class="login-icon">
-            <!--<img src="" alt="">-->
-            <p>Perfil</p>
+            <img src="/images/users/<%= locals.userLogged.image %> " alt="Profile image" class="profile-pic">
+            <p><%= locals.userLogged.first_name + ' ' + locals.userLogged.last_name %> </p>
         </div>
     </a>
     <a href="/users/logout" class="login-hide">    
@@ -23,6 +24,7 @@
             <p>Logout</p>
         </div>
     </a>
+    <% } else { %> 
     <a href="/users/login" class="login-hide">    
         <div class="login-icon">
             <i class="fas fa-sign-in-alt"></i>
@@ -35,6 +37,7 @@
             <p>Registrate</p>
         </div>
     </a>
+    <% } %> 
     <a href="/products/productCart">    
         <div class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
