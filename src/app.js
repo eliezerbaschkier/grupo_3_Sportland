@@ -6,6 +6,7 @@ const routesUsers = require('./routes/users');
 const path = require('path');
 const publicPath = path.join(__dirname, '../public');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 app.use(express.static(publicPath));
 app.use(methodOverride('_method'));
@@ -13,6 +14,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.urlencoded({ extended : false}));
 app.use(express.json());
+app.use(session({
+    secret: 'It is a secret',
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');

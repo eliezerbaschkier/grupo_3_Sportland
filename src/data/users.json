@@ -14,8 +14,34 @@
   "last_name": "Ronaldo",
   "email": "cr7@cr7.com",
   "password": "$2a$10$YpJm451QYXfsuT.LfQkDN.gqZbo/DCy7o6yvzcq9DYS2wrBfx/8ym",
-  "confirmPassword": null,
   "image": "user-1633364055545.jpg",
+  "category": "client"
+ },
+ {
+  "id": 3,
+  "first_name": "Soy",
+  "last_name": "Administrador",
+  "email": "admin@sportland.com",
+  "password": "$2a$10$iXuGVqKZzpFTM0nEZxcOWudxz.JzIFzzuw3SMLMy/IXTVHD0A7BF6",
+  "image": "user-1633546124974.png",
+  "category": "admin"
+ },
+ {
+  "id": 4,
+  "first_name": "Otro",
+  "last_name": "Usuario",
+  "email": "otro@usuario.com",
+  "password": "$2a$10$ewsaoEYqRKpdYrWwQioFLOrTIKJRZaAMApRRkkXeWQE7NXzC4YG2W",
+  "image": "user-1633546268409.jpeg",
+  "category": "client"
+ },
+ {
+  "id": 5,
+  "first_name": "Prueba",
+  "last_name": "Prueba",
+  "email": "a@b.com",
+  "password": "$2a$10$PTeA5NX1D5IVzcIneX/YI.D19VEowmDXHTIGfnh4AqOdtmSb3maFi",
+  "image": "user-1633548879696.jpeg",
   "category": "client"
  }
 ]

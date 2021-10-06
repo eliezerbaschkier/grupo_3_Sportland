@@ -10,8 +10,6 @@ const validations = [
     body('password').notEmpty().withMessage('Por favor escribe una contraseña'),
     body('confirmPassword').notEmpty().withMessage('Por favor confirma la contraseña').bail()
         .custom((value, { req }) => {
-            console.log(req.body);
-            console.log(req.body.confirmPassword !== req.body.password);
             if (req.body.confirmPassword !== req.body.password) {
                 throw new Error('Las contraseñas no coinciden');
             }
