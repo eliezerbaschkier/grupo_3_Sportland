@@ -9,7 +9,10 @@
                 <div class="contenedorCampoLogin">
                     <label class="contLoginFormA">E-Mail</label>
                     <input type="email" name="email" placeholder="Ingresa tu E-Mail" class="contLoginFormB"> 
-                    <input type="checkbox" name="remember_user">Recordar mi usuario            
+                    <div class="contLoginFormA">
+                        <input type="checkbox" name="remember_user">
+                        <label for="remember_user">Recordar mi usuario</label>            
+                    </div>
                     <% if (locals.errors && errors.email) { %>
                     <div class="mensaje-error">
                         <%= errors.email.msg %>
@@ -21,8 +24,6 @@
 
                      <button type="submit" class="contLoginFormC" name="ingresa">INGRESÁ</button> 
                      <a href="/users/login">Olvidé mi contraseña</a>
-
-                     <label for="RecordarUsuarioYContraseña">Recordar usuario y contraseña</label>
                      <p class="contenedorAunNoTenesCuenta">¿Aún no tenés cuenta?</p>
                     <a href="/register" class="contLoginFormD"><i class="fas fa-id-card"></i>Registrate</a>
                 </div>

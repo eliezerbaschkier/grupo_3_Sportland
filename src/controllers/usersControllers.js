@@ -38,11 +38,11 @@ const usersControllers = {
                 
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin; //guarda en sesion (del lado server) el usuario sin constraseña, la borró en la linea anterior
-                /*
+                
                 //si está tidada la casilla de recordarme
 				if(req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })//crea una cookie y la guarda por: un minuto X 60 = una hora
-				}*/
+				}
 
                 //LISTO ACA ESTOY LOGEADO!!!! Por el momento redirigo a la pagina principal...
                 return res.redirect('/users/profile'); //Listo! esta logueado
@@ -124,7 +124,7 @@ const usersControllers = {
     },
 
     logout: (req, res) => {
-        //res.clearCookie('userEmail');
+        res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/');    
     }
