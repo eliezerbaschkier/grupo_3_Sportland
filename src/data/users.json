@@ -43,5 +43,14 @@
   "password": "$2a$10$PTeA5NX1D5IVzcIneX/YI.D19VEowmDXHTIGfnh4AqOdtmSb3maFi",
   "image": "user-1633548879696.jpeg",
   "category": "client"
+ },
+ {
+  "id": 6,
+  "first_name": "Usuario de",
+  "last_name": "PRueba",
+  "email": "usuario@deprueba.com",
+  "password": "$2a$10$G7grnwlrc6E72UvqIMaPSuiCzyVLWjd3NgkTIBpmm.6.La2rNHmEy",
+  "image": "user-1633653310988.jpg",
+  "category": "client"
  }
 ]
