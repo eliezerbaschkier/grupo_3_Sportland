@@ -21,9 +21,9 @@
 --
 
 
-DROP DATABASE IF EXISTS sportland2;
-CREATE DATABASE sportland2;
-USE sportland2;
+DROP DATABASE IF EXISTS sportland;
+CREATE DATABASE sportland;
+USE sportland;
 
 --
 -- Table structure for table `productCart`
