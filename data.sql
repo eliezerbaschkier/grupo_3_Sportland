@@ -26,6 +26,7 @@ CREATE TABLE `productCart` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int unsigned NOT NULL,
   `product_id` int unsigned NOT NULL,
+  `quantity` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `productCart_FK` (`user_id`),
   KEY `productCart_FK_1` (`product_id`),
