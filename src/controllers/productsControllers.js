@@ -5,21 +5,31 @@ const dotToComma = n => n.toString().replace(/\./, ",");
 const commaToDot = n => n.toString().replace(/\,/, ".");
 const dotToEmpty = n => n.toString().replace(/\./, "");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 const productsControllers = {
     productList: (req,res) => {
         let title = 'Lista de productos';
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-        res.render('./products/products', {title: title, products: products});
+        db.Product.findAll()
+            .then(products => {
+                res.render('./products/products', {title: title, products: products});
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     productDetail: (req,res) => {
         let title = 'Detalle de producto';
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-        let productId = req.params.id;
-        let productToShowInDetail = products.filter( i  => i.id == productId);
-        res.render('./products/productDetail', {title: title, productId: productId, productToShowInDetail: productToShowInDetail[0] });
-
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                res.render('./products/productDetail', {title: title, productId: req.params.id, productToShowInDetail: product });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     productCart: (req,res) => {
@@ -29,21 +39,26 @@ const productsControllers = {
 
     createProduct: (req,res) => {
         let title = 'Crear producto';
-        res.render('./products/createProduct', {title: title});
+        db.ProductCategory.findAll()
+            .then(categories => {
+                res.render('./products/createProduct', {title: title, categories});
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     store: (req,res) => {
         if (req.file) {
-			let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-			let newProduct = {
+			db.Product.create({
 				id: Date.now(),
 				name: req.body.name,
 				price: req.body.price,
-                size: req.body.size,
 				category: req.body.category,
 				description: req.body.description,
 				image: req.file.filename
-			};
+			})
+
 			products.push(newProduct);
 			let productsJSON = JSON.stringify(products, null, ' ');
 			fs.writeFileSync(productsFilePath, productsJSON);

@@ -15,18 +15,21 @@
                  <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
                  <label class="contMainFormA">Categoría</label>
                  <select id="anchoSelector" name="category">
-                    <% let categoryOptions = ['Sin seleccionar','Hombre', 'Mujer', 'Niño', 'Equipamiento'] %>
-                    <% for ( i = 0 ; i < categoryOptions.length ; i++) { %>
-                        <option value="<%= categoryOptions[i] %>"> <%= categoryOptions[i] %> </option>
+                    <option value="" disabled selected>- Seleccionar categoría - </option>
+                    <% for ( i = 0 ; i < categories.length ; i++) { %>
+                        <option value="<%= categories[i].id %>"> <%= categories[i].name %> </option>
                     <% } %>
                 </select>   
+                <!-- 
+
                 <label class="contMainFormA">Talle</label>              
                 <select id="anchoSelector" name="size">
                     <% let sizeOptions = ['Sin seleccionar','XS', 'S', 'M', 'L', 'XL'] %>
                     <% for ( i = 0 ; i < sizeOptions.length ; i++) { %>
                         <option value="<%= sizeOptions[i] %>"> <%= sizeOptions[i] %> </option>
                     <% } %>
-                </select>                 
+                </select>  
+                -->               
                  <label class="contMainFormA">Precio</label>
                  <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
                 <button class="contMainButton" type="submit" name="Enviar">Crear Producto</button>

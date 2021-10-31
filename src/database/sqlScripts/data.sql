@@ -27,6 +27,9 @@ CREATE TABLE `productCart` (
   `user_id` int unsigned NOT NULL,
   `product_id` int unsigned NOT NULL,
   `quantity` int unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `modified_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `productCart_FK` (`user_id`),
   KEY `productCart_FK_1` (`product_id`),
@@ -54,6 +57,9 @@ DROP TABLE IF EXISTS `productCategory`;
 CREATE TABLE `productCategory` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `modified_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,7 +70,7 @@ CREATE TABLE `productCategory` (
 
 LOCK TABLES `productCategory` WRITE;
 /*!40000 ALTER TABLE `productCategory` DISABLE KEYS */;
-INSERT INTO `productCategory` VALUES (1,'Gym'),(2,'Male'),(3,'Female');
+INSERT INTO `productCategory` VALUES (1,'Gym', NULL, NULL, NULL),(2,'Hombre', NULL, NULL, NULL),(3,'Mujer', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `productCategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
