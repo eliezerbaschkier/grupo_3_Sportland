@@ -51,18 +51,18 @@ const productsControllers = {
     store: (req,res) => {
         if (req.file) {
 			db.Product.create({
-				id: Date.now(),
 				name: req.body.name,
 				price: req.body.price,
-				category: req.body.category,
+				category_id: req.body.category,
 				description: req.body.description,
 				image: req.file.filename
 			})
-
-			products.push(newProduct);
-			let productsJSON = JSON.stringify(products, null, ' ');
-			fs.writeFileSync(productsFilePath, productsJSON);
-			res.redirect('/products'); 
+                .then(() => {
+                    res.redirect('/products');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
 		} else {
 			res.redirect('/products/create');
 		}
@@ -70,40 +70,96 @@ const productsControllers = {
     
     edit: (req,res) => {
         let title = 'Editar producto';
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-        let productId = req.params.id;
-        let productToEdit = products.filter(product => product.id == productId);
-        res.render('./products/editProduct', {title: title, productToEdit: productToEdit, toThousand: toThousand, dotToComma: dotToComma});
+        let productRequest = db.Product.findByPk(req.params.id, {
+            include: [
+                {association: 'categories'}
+            ]
+        });
+
+        let categoriesRequest = db.ProductCategory.findAll();
+
+        Promise.all([productRequest, categoriesRequest])
+            .then(([product, categories]) => {
+                res.render('./products/editProduct',
+                {title: title, productToEdit: product, categories,
+                toThousand: toThousand, dotToComma: dotToComma});
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     },
 
     update: (req, res) => {
-        let productId = req.params.id;
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-        products.forEach(product => {
-            if(product.id == productId) {
-                product.name = req.body.name;
-                product.description = req.body.description;
-                product.category = req.body.category;
-                product.size = req.body.size;
-                product.price = req.body.price;
-                if (req.file) {
-                    let indexProduct = products.findIndex(product => product.id == productId);
-                    let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
-                        fs.unlink(imagePath, function (err) {
-                            if (err) {
-                                console.log('Could not delete file');
-                            };
-                        });
-                    product.image = req.file.filename;
+
+        if (req.file){
+            db.Product.update(
+                {
+                    name: req.body.name,
+                    price: req.body.price,
+                    category_id: req.body.category,
+                    description: req.body.description,
+                    image: req.file.filename
+                },
+                {
+                    where: {
+                        id: req.params.id
                 }
-            }
-        });
-        let productsJSON = JSON.stringify(products, null, ' ');
-        fs.writeFileSync(productsFilePath, productsJSON);
-        res.redirect('/products'); 
+                }
+            )
+                .then(() => {
+                    /* TODO: delete old image if new image is added
+                    let indexProduct = products.findIndex(product => product.id == productId);
+                        let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
+                            fs.unlink(imagePath, function (err) {
+                                if (err) {
+                                    console.log('Could not delete file');
+                                };
+                            });
+                    */
+                    res.redirect('/products');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        } else {
+            db.Product.update(
+                {
+                    name: req.body.name,
+                    price: req.body.price,
+                    category_id: req.body.category,
+                    description: req.body.description,
+                },
+                {
+                    where: {
+                        id: req.params.id
+                }
+                }
+            )
+                .then(() => {
+                    res.redirect('/products');
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
     },
 
     delete: (req, res) => {
+
+        db.Product.destroy({
+            where: {
+                id : req.params.id
+                }
+            }
+        )
+            .then(() => {
+                res.redirect('/products');
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        /*
         let productId = req.params.id;
         let products = JSON.parse(fs.readFileSync(productsFilePath));
         let indexProduct = products.findIndex(product => product.id == productId);
@@ -117,7 +173,9 @@ const productsControllers = {
         let productsUpdatedJSON = JSON.stringify(productsUpdated, null, ' ');
         fs.writeFileSync(productsFilePath, productsUpdatedJSON);
         res.redirect('/products');
+        */
     }
+    
 };
 
 module.exports = productsControllers;
