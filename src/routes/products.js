@@ -37,6 +37,9 @@ router.put('/:id', upload.single('image'), productsControllers.update)
 // Delete product //
 router.delete('/:id', productsControllers.delete)
 
+// Search product //
+router.get('/search/', productsControllers.search);
+
 /*
 router.post('/productDetail', productsControllers.productDetail);
 router.post('/productCart', productsControllers.productCart);

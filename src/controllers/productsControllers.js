@@ -158,22 +158,22 @@ const productsControllers = {
             .catch((error) => {
                 console.log(error);
             });
+    },
 
-        /*
-        let productId = req.params.id;
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-        let indexProduct = products.findIndex(product => product.id == productId);
-        let imagePath = path.join(__dirname, '../../public/images/products', products[indexProduct].image);
-        fs.unlink(imagePath, function (err) {
-            if (err) {
-                console.log('Could not delete file');
-            };
-        });
-        let productsUpdated = products.filter(product => product.id != productId);
-        let productsUpdatedJSON = JSON.stringify(productsUpdated, null, ' ');
-        fs.writeFileSync(productsFilePath, productsUpdatedJSON);
-        res.redirect('/products');
-        */
+    search: (req, res) => {
+        let title = 'Búsqueda de' /*+ `${req.query.search}`*/;
+        console.log(req.query.search);
+        db.Product.findAll({
+            where: {
+              name: {[db.Sequelize.Op.like] : `%${req.query.search}%`}  
+            }
+        })
+            .then((products) => {
+                res.render('./products/productSearch', {products, title});
+            })
+            .catch((error) => {
+                console.log(error);
+            });
     }
     
 };

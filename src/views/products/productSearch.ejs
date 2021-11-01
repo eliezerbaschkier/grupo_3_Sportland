@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body class="Index_Body">
+    <%- include('../partials/header') %>
+    <main class="Index">
+
+        <h2 style="color: rgb(245, 239, 239); margin-right: 60vw;">Resultado de la búsqueda</h2>
+
+        <div class="contenedor">
+
+            <!-------INICIO CICLO-->
+            <% products.forEach(function(prod){ %>
+                <div class="cajaGrande">
+                    <a href="/products/detail/<%= prod.id %>">
+                        <img src="/images/products/<%=prod.image %>" alt="<%= prod.name %>">
+                        <div class="cajaChica">     
+                            <div class="columnaIzq">
+                                <div class="renglonArriba">  
+                                <p class="precios">$<%= prod.price %></p>
+                                <p class="descuentos">20% OFF</p></div>
+                                <div class="renglonAbajo"> 
+                                        <p class="descripciones"><%= prod.name %></p></div>
+                            </div>
+                            <div class="columnaDer">
+                                <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                                <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                            </div>
+                
+                        </div>
+                    </a>
+                </div>
+            <%	}) %>
+        </div>
+
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
