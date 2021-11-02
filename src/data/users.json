@@ -52,5 +52,86 @@
   "password": "$2a$10$G7grnwlrc6E72UvqIMaPSuiCzyVLWjd3NgkTIBpmm.6.La2rNHmEy",
   "image": "user-1633653310988.jpg",
   "category": "client"
+ },
+ {
+  "id": 7,
+  "first_name": "nombre",
+  "last_name": "apellido",
+  "email": "mail@dominio.com.ar",
+  "password": "$2a$10$3Phb4GzedIPNFIPi8ATiBegJxDF4RvnuWUu7nhdWRs03ouGZ4EZ86",
+  "image": "user-1635793466717.jpg",
+  "category": "client"
+ },
+ {
+  "id": 8,
+  "first_name": "carlos",
+  "last_name": "sanchez",
+  "email": "carlos@sanchez.com.ar",
+  "password": "$2a$10$wBThVhLqBPMryEBnbMraPeqOBOok1NS84bRRIz40b/0jItfZhdtTK",
+  "image": "user-1635801327817.jpg",
+  "category": "client"
+ },
+ {
+  "id": 9,
+  "first_name": "julian",
+  "last_name": "alvarez",
+  "email": "j@a.com.ar",
+  "password": "$2a$10$.aSkFDwhG4dRSrNvvRs7uONFsXUp8A6yZF2zB1WR8Wh19MPQoOpb.",
+  "image": "user-1635804813783.jpg",
+  "category": "client"
+ },
+ {
+  "id": 10,
+  "first_name": "diego",
+  "last_name": "maradona",
+  "email": "d@m.com",
+  "password": "$2a$10$ooXzjVCQGqxaVCjwoLToBuXAsQPpMpemSqmk3O1gqbMAEBmqsbWEu",
+  "image": "user-1635806440471.jpg",
+  "category": "client"
+ },
+ {
+  "id": 11,
+  "first_name": "sadasdas",
+  "last_name": "dsadasdas",
+  "email": "d@m.com",
+  "password": "$2a$10$0L0J5pducCmPVejs6MZBPuPDE2tsHdWDhqsTQXH6CsLSaZ14L2oO6",
+  "image": "user-1635806495176.jpg",
+  "category": "client"
+ },
+ {
+  "id": 12,
+  "first_name": "fdfdsf",
+  "last_name": "dfsdfds",
+  "email": "d@m.com",
+  "password": "$2a$10$MLGf7cZ1tufaHrZ8PPB94uvPR.dSSEThc51fnqN6fmAKcy3DN1EAG",
+  "image": "user-1635806555087.jpg",
+  "category": "client"
+ },
+ {
+  "id": 13,
+  "first_name": "chris",
+  "last_name": "boglio",
+  "email": "caboglio@gmail.com",
+  "password": "$2a$10$vRmL/TM9TlQ1OgDRTDLhjuo6Y1CEjDJMUZIKOqMDnBcVqDSr4W876",
+  "image": "user-1635807651927.jpg",
+  "category": "client"
+ },
+ {
+  "id": 14,
+  "first_name": "juan",
+  "last_name": "perez",
+  "email": "juan@perez.com",
+  "password": "$2a$10$R7rmNh21JHFovFl3xWtLi.syleJRrJlPDTmbdbC7F0.sA4XK5wP5q",
+  "image": "user-1635813337810.jpg",
+  "category": "client"
+ },
+ {
+  "id": 15,
+  "first_name": "sasas",
+  "last_name": "sasa@sasa.com",
+  "email": "mail@dominio.com.ar",
+  "password": "$2a$10$0uSLXmB.k0nWHH1EL1gCgOJAONFaFttqN.AhPHEf3tUf.DiVQ3nL6",
+  "image": "user-1635814152348.jpg",
+  "category": "client"
  }
 ]

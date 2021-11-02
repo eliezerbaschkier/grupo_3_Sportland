@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+
+    <br><br>
+    <h1>Listado de Usuarios cargados en la Base de Datos:</h1>
+    <br>
+
+	<ul>
+
+    <% for(let i=0;i<users.length;i++){ %>
+        <li>
+    <%= i+')  '+users[i].first_name + ' ' +users[i].last_name + '   (' +users[i].email+')' %>
+    </li>
+    <%}%>
+
+
+    </ul>
+
+	<br><br>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

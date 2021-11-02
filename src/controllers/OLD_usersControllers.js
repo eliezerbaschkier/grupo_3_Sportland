@@ -3,33 +3,7 @@ const User = require('../models/userModel');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-//-----------------------------------------sprint 6
-const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
-//-------------------------------------------------
-
-
 const usersControllers = {
-
-    userList: (req,res) => {
-        let title = 'Listado de Usuarios';
-
-
-
-
-
-        db.User.findAll()
-            .then(users => {
-                res.render('./users/listadoUsuarios', {title: title, users: users});
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    },
-
-
-
     login: (req,res) => {
         let title = 'Ingresá';
         res.render('users/login', {title: title});
@@ -38,28 +12,24 @@ const usersControllers = {
   //--------------------------------------------------------------------------------------------------------------------------------------------------  
     loginProcess: (req, res) => {
             let title = 'Ingresá';
-            //let userToLogin = User.findByField('email',req.body.email);  //!Reeplazar por findbyPK-------------------------------------
-            //let allUsers = db.User.findAll();
-            //let userToLogin = allUsers[10];
-            
-           //console.log(allUsers[10]);
-
-
-        db.User.findOne({
-                where: {
-                    email: req.body.email 
-                }
-                }).then(function(userToLogin){
-
-                    //console.log(userToLogin);
-                    //let userToLogin = allUsers[10];
-                              
-
+            let userToLogin = User.findByField('email',req.body.email);
 
             //si se encuentra el mail ingresado en la base de datos
             if(userToLogin) {
+               //let isOkThePassword = false;
 
+              // return res.send(userToLogin); //esto lo uso para validar el logui me muestra el usuario ingresado que se encontro en la base....
                let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password); //Compara usando encriptacion
+
+             // console.log('pass del formulario: req.body.password');
+              //console.log(req.body.password);
+              //console.log('pass de la base: userToLogin.password');
+              //console.log(userToLogin.password);
+              
+               //let isOkThePassword = (req.body.password == userToLogin.password) ? true : false; //Compara sin encriptar (cuando este el register terminado lo cambio)
+               
+               //console.log('valor de isOkThePassword');
+              // console.log(isOkThePassword);
 
                
               //si además está bien la contraseña               
@@ -102,9 +72,7 @@ const usersControllers = {
                 }
             });
 
-                }).catch((error) => {
-                    console.log('MENSAJE DE ERROR DE LA PROMESA DE BUSCAR USUARIO:  ' + error);
-                });
+
   
     },
 
@@ -117,25 +85,16 @@ const usersControllers = {
 
     processRegister: (req, res) => {
         let title= 'Registrate';
-       
-       
         let validationsResult = validationResult(req);
         
         if (validationsResult.errors.length > 0) {
             return res.render('users/register' , { title: title, errors: validationsResult.mapped(), oldData: req.body})
         }
 
-        //let userInDB = User.findByField('email', req.body.email);//-------------------------------- pendiente: reeeplazar busqueda en json por busqueda en BD
-        db.User.findOne({
-            where: {
-                email: req.body.email 
-            }
-            }).then(function(userInDB){
-        
-       
+        let userInDB = User.findByField('email', req.body.email);
 
 		if (userInDB) {
-           		return res.render('users/register', { title,
+			return res.render('users/register', { title,
 				errors: {
 					email: {
 						msg: 'Este email ya está registrado'
@@ -152,36 +111,11 @@ const usersControllers = {
             category: 'client',
 		}
 
-       
-       //------------------------------------------------------------nuevo: crea usr en base de datos
-        db.User.create({
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file.filename,
-            category: 'client'
-        })
-            .then(() => {
-                res.redirect('/users/login');
-                delete userToCreate.confirmPassword
-                let userCreated = User.create(userToCreate);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-            //--------------------------------------------------fin
+        delete userToCreate.confirmPassword
 
-            delete userToCreate.confirmPassword
-
-            let userCreated = User.create(userToCreate);
+		let userCreated = User.create(userToCreate);
 
 		return res.redirect('/users/login');
-
-    }).catch((error) => {
-        console.log('MENSAJE DE ERROR DE LA PROMESA DE VALIDAR USUARIO:  ' + error);
-    });
-
     },
 
     profile: (req, res) => {

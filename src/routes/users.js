@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const usersControllers = require('../controllers/usersControllers');
+
 const upload = require('../middlewares/usersImageMW');
 const validations = require('../middlewares/registerValidationsMW');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const User = require('../models/userModel');
 
 //const {body} = require('express-validator');//gregado cb
 
@@ -28,6 +30,8 @@ router.get('/profile', authMiddleware, usersControllers.profile);
 
 // Logout
 router.get('/logout', usersControllers.logout);
+
+router.get('/listadoUsuarios',usersControllers.userList);
 
 
 module.exports = router;
