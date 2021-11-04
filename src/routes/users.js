@@ -28,6 +28,11 @@ router.post('/register', upload.single('image'), validations, usersControllers.p
 // User profile
 router.get('/profile', authMiddleware, usersControllers.profile);
 
+//Editar perfil de usuario
+router.get('/editProfile', authMiddleware, usersControllers.editProfile);
+router.post('/updateProfile', usersControllers.updateProfile);
+
+
 // Logout
 router.get('/logout', usersControllers.logout);
 

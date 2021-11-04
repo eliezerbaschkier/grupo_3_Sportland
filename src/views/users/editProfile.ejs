@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body class="Site">
+    <%- include('../partials/header') %>
+    <main class="Site-content">
+        <div class="col-md-3">
+            <h2><%= user.first_name + ' ' + user.last_name %> </h2>
+            <img src="/images/users/<%= user.image %> ">
+<a href="">Cambiar foto de Perfil</a>
+</div>
+
+
+<form class="contenedorMainForm" action="/users/updateProfile" method="POST" enctype="multipart/form-data">
+    <label class="contMainFormA">Nombre</label>
+    <input
+        type="text"
+        name="first_name"
+        placeholder="<%= user.first_name %>"
+        class="contMainFormB"
+        value="<%= user.first_name %>"
+    > 
+    <% if (locals.errors && errors.first_name) { %>
+            <p class="contMainFormA error"><%= errors.first_name.msg %>  </p>
+    <% } %>              
+    <label class="contMainFormA">Apellido</label>
+    <input
+        type="text"
+        name="last_name"
+        placeholder="<%= user.last_name %>"
+        class="contMainFormB"
+        value="<%= (locals.oldData && oldData.last_name) ? oldData.last_name : '' %>"
+    > 
+    <% if (locals.errors && errors.last_name) { %>
+        <p class="contMainFormA error"><%= errors.last_name.msg %>  </p>
+    <% } %> 
+    
+    <label class="contMainFormA">E-Mail</label>
+    <input
+        type="text"
+        name="email"
+        readonly
+        placeholder="<%= user.email %>"
+        class="contMainFormB"
+        value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>"
+
+    >
+    <% if (locals.errors && errors.email) { %>
+        <p class="contMainFormA error"><%= errors.email.msg %>  </p>
+    <% } %>  
+   
+    
+   
+    <button class="contMainButton" type="submit">Actualizar Datos Personales</button>
+</form>
+
+
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

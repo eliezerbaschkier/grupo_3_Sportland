@@ -133,5 +133,14 @@
   "password": "$2a$10$0uSLXmB.k0nWHH1EL1gCgOJAONFaFttqN.AhPHEf3tUf.DiVQ3nL6",
   "image": "user-1635814152348.jpg",
   "category": "client"
+ },
+ {
+  "id": 16,
+  "first_name": "marcelo",
+  "last_name": "gallardo",
+  "email": "mgallardo@riverplate.com.ar",
+  "password": "$2a$10$dYN6vz5sr.Eqehs4j2SpYeL47E9u2IiEH5cF9ueBFDHt77BOKr3Ki",
+  "image": "user-1635875614013.jpg",
+  "category": "client"
  }
 ]

@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { Console } = require('console');
 //-------------------------------------------------
 
 
@@ -14,11 +15,6 @@ const usersControllers = {
 
     userList: (req,res) => {
         let title = 'Listado de Usuarios';
-
-
-
-
-
         db.User.findAll()
             .then(users => {
                 res.render('./users/listadoUsuarios', {title: title, users: users});
@@ -27,7 +23,6 @@ const usersControllers = {
                 console.log(error);
             });
     },
-
 
 
     login: (req,res) => {
@@ -188,6 +183,34 @@ const usersControllers = {
         let title = 'Perfil de usuario';
         res.render('users/userProfile', {title, user: req.session.userLogged});
     },
+
+    editProfile: (req,res) => {
+        let title = 'Editar Perfil';
+        res.render('users/editProfile', {title, user: req.session.userLogged});
+    },
+
+
+    updateProfile: function (req,res) {
+        console.log('guardando: '+req.body.email+ '--'+req.body.first_name+' '+req.body.last_name);
+        db.User.update({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name
+        },{
+            where: {
+                email: req.body.email
+            }
+        })
+            .then(() => {
+                res.redirect('/users/profile');
+                                //pendiente actualizar variable que contiene el usr de sesion...
+                        })
+            .catch((error) => {
+                console.log('ERROR AL ACTUALIZAR DATOS: '+error);
+            });
+
+    },
+
+
 
     logout: (req, res) => {
         res.clearCookie('userEmail');

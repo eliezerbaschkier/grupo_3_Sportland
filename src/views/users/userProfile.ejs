@@ -9,9 +9,17 @@
 			<div class="col-md-3">
 				<h2><%= user.first_name + ' ' + user.last_name %> </h2>
 				<img src="/images/users/<%= user.image %> ">
-				<br>
-				<br>
+				
+				
 				<div class="alert alert-success"><%= user.email %> </div>
+				<br>
+
+				<a href="/users/editProfile">Modificar Datos del Perfil</a>
+				<br>
+				<a href="/users/editProfile">Cambiar Contraseña (falta desarrollar)</a>
+
+
+
 			</div>
 		</div>
 	</div>
