@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head') %>
+<body class="Site">
+    <%- include('../partials/header') %>
+    <main class="Site-content">
+        <div class="contenedorMain">
+           
+            
+            <form class="contenedorMainForm" action="/users/updateFoto"  method="POST" enctype="multipart/form-data">
+                
+
+                <label class="contMainFormA"></label>
+                <input
+                    type="file"
+                    name="image"
+                    placeholder="Imagen"
+                    class="contMainFormB"
+                >  
+                <% if (locals.errors && errors.image) { %>
+                    <p class="contMainFormA error"><%= errors.image.msg %>  </p>
+                <% } %>                  
+
+                <label class="contMainFormA">E-Mail</label>
+                <input
+                    type="text"
+                    name="email"
+                    readonly
+                    class="contMainFormB"
+                    value="<%= user.email %>"
+            
+                >
+                <% if (locals.errors && errors.email) { %>
+                    <p class="contMainFormA error"><%= errors.email.msg %>  </p>
+                <% } %>  
+
+
+                <button class="contMainButton" type="submit">Confirmar nueva Foto</button>
+            </form>
+
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

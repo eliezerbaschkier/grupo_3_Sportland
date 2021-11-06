@@ -181,20 +181,39 @@ const usersControllers = {
 
     profile: (req, res) => {
         let title = 'Perfil de usuario';
-        res.render('users/userProfile', {title, user: req.session.userLogged});
+
+        db.User.findOne({
+            where: {
+                email: req.session.userLogged.email
+            }
+            }).then(function(user){
+
+       // res.render('users/userProfile', {title, user: req.session.userLogged});
+       res.render('users/userProfile', {title, user});
+
+            });
     },
 
     editProfile: (req,res) => {
         let title = 'Editar Perfil';
-        res.render('users/editProfile', {title, user: req.session.userLogged});
+
+        db.User.findOne({
+            where: {
+                email: req.session.userLogged.email
+            }
+            }).then(function(user){
+
+   
+       res.render('users/editProfile', {title, user});
+       // res.render('users/editProfile', {title, user: req.session.userLogged});
+    });
     },
 
 
     updateProfile: function (req,res) {
-        console.log('guardando: '+req.body.email+ '--'+req.body.first_name+' '+req.body.last_name);
-        db.User.update({
+            db.User.update({
             first_name: req.body.first_name,
-            last_name: req.body.last_name
+            last_name: req.body.last_name,
         },{
             where: {
                 email: req.body.email
@@ -202,13 +221,107 @@ const usersControllers = {
         })
             .then(() => {
                 res.redirect('/users/profile');
-                                //pendiente actualizar variable que contiene el usr de sesion...
+                               // req.session.userLogged.first_name=req.body.first_name;
+                                //req.session.userLogged.last_name=req.body.last_name;
                         })
             .catch((error) => {
                 console.log('ERROR AL ACTUALIZAR DATOS: '+error);
             });
 
     },
+
+
+        cambiarFoto: function(req,res){
+        let title = 'Cambiar Foto';
+
+        db.User.findOne({
+            where: {
+                email: req.session.userLogged.email
+            }
+            }).then(function(user){
+
+
+        res.render('users/cambiarFoto', {title, user});
+            })
+
+
+    },
+
+        updateFoto: function(req,res){
+            let title = 'Cambiar Foto';
+            //res.render('users/cambiarFoto', {title});
+        //enctype="multipart/form-data"
+
+        console.log('ahora vamos a intentar updeterr');
+         console.log(req.file.filename +'----------'+req.body.email);
+
+            db.User.update({
+
+             //   image: req.body.image    
+                image: req.file.filename
+            },{
+                where: {
+                    email: req.body.email
+                }
+            })
+                .then(() => {
+                    console.log('estoy adentro del THENNN');
+                    res.redirect('/users/profile');
+
+                            })
+                .catch((error) => {
+                    console.log('ERROR AL ACTUALIZAR FOTO DE PERFIL: '+error);
+                });
+            
+        },
+
+
+        cambiarPass: function(req,res){
+            let title = 'Cambiar Contraseña';
+    
+            db.User.findOne({
+                where: {
+                    email: req.session.userLogged.email
+                }
+                }).then(function(user){
+    
+    
+            res.render('users/cambiarPass', {title, user});
+                })
+    
+    
+        },
+
+
+        updatePass: function(req,res){
+            let title = 'Cambiar Contraseña';
+
+            //Validacion de Contraseñas que coincidan:
+            /*let validationsResult = validationResult(req);
+        
+            if (validationsResult.errors.length > 0) {
+                return res.render('users/cambiarPass' , { title: title, errors: validationsResult.mapped(), oldData: req.body})
+            }
+            */
+    
+            db.User.update({
+
+                   password: bcryptjs.hashSync(req.body.password, 10),
+               },{
+                   where: {
+                       email: req.body.email
+                   }
+               })
+                   .then(() => {
+                       res.redirect('/users/profile');
+   
+                               })
+                   .catch((error) => {
+                       console.log('ERROR AL ACTUALIZAR CONTRASEÑA: '+error);
+                   });
+    
+    
+        },
 
 
 

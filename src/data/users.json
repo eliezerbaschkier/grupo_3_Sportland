@@ -142,5 +142,14 @@
   "password": "$2a$10$dYN6vz5sr.Eqehs4j2SpYeL47E9u2IiEH5cF9ueBFDHt77BOKr3Ki",
   "image": "user-1635875614013.jpg",
   "category": "client"
+ },
+ {
+  "id": 17,
+  "first_name": "pity",
+  "last_name": "martinez",
+  "email": "pmartinez@riverplate.com.ar",
+  "password": "$2a$10$sHmK3mLP8qlWoguo8Sw0ueqaHMYd0qhLBOj6Q.wqaSijgLbh/Y82a",
+  "image": "user-1636147911629.jpg",
+  "category": "client"
  }
 ]

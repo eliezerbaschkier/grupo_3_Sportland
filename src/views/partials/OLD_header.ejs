@@ -14,8 +14,8 @@
     <% if (locals.isLogged) { %> 
     <a href="/users/profile" class="login-hide">    
         <div class="login-icon">
-            <img src="/images/users/<%= user.image %> " alt="Profile image" class="profile-pic">
-            <p><%= user.first_name + ' ' + user.last_name %> </p>
+            <img src="/images/users/<%= locals.userLogged.image %> " alt="Profile image" class="profile-pic">
+            <p><%= locals.userLogged.first_name + ' ' + locals.userLogged.last_name %> </p>
         </div>
     </a>
     <a href="/users/logout" class="login-hide">    

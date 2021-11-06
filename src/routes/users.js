@@ -30,12 +30,16 @@ router.get('/profile', authMiddleware, usersControllers.profile);
 
 //Editar perfil de usuario
 router.get('/editProfile', authMiddleware, usersControllers.editProfile);
-router.post('/updateProfile', usersControllers.updateProfile);
+router.post('/updateProfile', upload.single('image'), validations,usersControllers.updateProfile);
 
+router.post('/updateFoto', upload.single('image'), validations, usersControllers.updateFoto);
+router.get('/cambiarFoto', usersControllers.cambiarFoto);
+
+router.post('/updatePass', upload.single('image'), validations, usersControllers.updatePass);
+router.get('/cambiarPass', usersControllers.cambiarPass);
 
 // Logout
 router.get('/logout', usersControllers.logout);
-
 router.get('/listadoUsuarios',usersControllers.userList);
 
 
