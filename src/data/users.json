@@ -151,5 +151,14 @@
   "password": "$2a$10$sHmK3mLP8qlWoguo8Sw0ueqaHMYd0qhLBOj6Q.wqaSijgLbh/Y82a",
   "image": "user-1636147911629.jpg",
   "category": "client"
+ },
+ {
+  "id": 18,
+  "first_name": "usuario",
+  "last_name": "mysql",
+  "email": "usuario@mysql.com",
+  "password": "$2a$10$zIaigdQvGWU4x630zGA4MuKIX3voYmKRhJUU5prOS3BKuRS2BYj6S",
+  "image": "user-1636288768973.png",
+  "category": "client"
  }
 ]
