@@ -1,18 +1,18 @@
 const path = require('path');
-
 const fs = require('fs');
-
 const productsFilePath = path.join(__dirname, '../data/products.json');
-
+const db = require('../database/models');
 
 const indexControllers = {
     home: (req,res) => {
         let title = 'Sportland';
-        let products = JSON.parse(fs.readFileSync(productsFilePath));
-		let visitados =products.filter(i => i.flag == 'visited');
-        //console.log(visitados);
-	
-        res.render('index', {title: title, productosVisitados: visitados});
+        db.Product.findAll()
+            .then(products => {
+                res.render('index', {title: title, products: products});
+            })
+            .catch((error) => {
+                console.log(error);
+            });
 
     }
 };
