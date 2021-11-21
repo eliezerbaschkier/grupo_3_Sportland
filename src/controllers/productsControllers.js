@@ -9,6 +9,8 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
+const { validationResult } = require('express-validator');//----------------------express
+
 const productsControllers = {
     productList: (req,res) => {
         let title = 'Lista de productos';
@@ -48,7 +50,30 @@ const productsControllers = {
             });
     },
 
-    store: (req,res) => {
+    store: (req,res) => {//--------------------------------------------------------------------------crear producto
+        let title = 'Crear producto';
+        let validaciones = validationResult(req);
+        
+        if (validaciones.errors.length > 0) {
+            db.ProductCategory.findAll()
+            .then(categories => {
+            //   res.render('./products/createProduct', {title: title, categories});
+                           // console.log('console log de errors: '+ validaciones.errors);
+            return res.render('products/createProduct' , { title: title, errors: validaciones.mapped(), oldData: req.body, categories});
+            //return res.send(req.body);
+
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+
+        
+        }
+        else{
+
+
+
         if (req.file) {
 			db.Product.create({
 				name: req.body.name,
@@ -66,7 +91,8 @@ const productsControllers = {
 		} else {
 			res.redirect('/products/create');
 		}
-    },
+    }
+},
     
     edit: (req,res) => {
         let title = 'Editar producto';

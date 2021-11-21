@@ -7,18 +7,55 @@
         <div class="contenedorMain">
                       <h3>Formulario Alta de Producto</h3>  
             <form class="contenedorMainForm" action="/products" method="POST" enctype="multipart/form-data">
+
+                <!-- NOMBRE DEL PRODUCTO -->
                 <label class="contMainFormA">Nombre del Producto</label>
-                 <input type="text" id="name" name="name" placeholder="Nombre de producto" class="contMainFormB" >                 
+                 <input type="text"
+                   id="name"
+                   name="name"
+                   placeholder="Nombre de producto"
+                   class="contMainFormB"
+                   value="<%= (locals.oldData && oldData.name) ? oldData.name : '' %>"
+                   >  
+                                <% if (locals.errors && errors.name) { %>
+                                <p class="contMainFormA error"><%= errors.name.msg %>  </p>
+                                <% } %>     
+
+                <!-- DESCRIPCION -->
                  <label class="contMainFormA">Descripción</label>
-                 <input type="text" name="description" placeholder="Descripcion" class="contMainFormB">                 
+                 <input 
+                    type="text" 
+                    name="description" 
+                    placeholder="Descripcion" 
+                    class="contMainFormB"
+                    value="<%= (locals.oldData && oldData.description) ? oldData.description : '' %>"
+                    >
+                    
+                                <% if (locals.errors && errors.description) { %>
+                                        <p class="contMainFormA error"><%= errors.description.msg %>  </p>
+                                <% } %> 
+
+
+                <!-- IMAGEN -->
                  <label class="contMainFormA">Imagen</label>
-                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">                 
+                 <input type="file" name="image" placeholder="Imagen" class="contMainFormB">  
+                 
+                            <% if (locals.errors && errors.image) { %>
+                                <p class="contMainFormA error"><%= errors.image.msg %>  </p>
+                            <% } %>   
+
+                 <!-- CATEGORIA  --> 
                  <label class="contMainFormA">Categoría</label>
                  <select id="anchoSelector" name="category">
-                    <option value="" disabled selected>- Seleccionar categoría - </option>
+                 <option value="" disabled selected>- Seleccionar categoría - </option>
+                   
+                     
                     <% for ( i = 0 ; i < categories.length ; i++) { %>
                         <option value="<%= categories[i].id %>"> <%= categories[i].name %> </option>
                     <% } %>
+                     
+
+
                 </select>   
                 <!-- 
 
@@ -31,7 +68,8 @@
                 </select>  
                 -->               
                  <label class="contMainFormA">Precio</label>
-                 <input type="text" name="price" placeholder="Precio" class="contMainFormB">                 
+                 <input type="text" name="price" placeholder="Precio" class="contMainFormB"> 
+
                 <button class="contMainButton" type="submit" name="Enviar">Crear Producto</button>
             </form>
 

@@ -8,12 +8,7 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const User = require('../models/userModel');
 
-//const {body} = require('express-validator');//gregado cb
 
-/*const validaciones= [
-    body('email').isEmail().withMessage ( 'Debe ingresar un email valido' ),
-    body('contraseña').isLength({ min : 8 }).withMessage( 'La contraseña debe tener al menos 8 caracteres' ),
-];*/
 
 router.get('/login', guestMiddleware , usersControllers.login);
 //router.post('/login',validaciones,usersControllers.login);//agregado christian...
