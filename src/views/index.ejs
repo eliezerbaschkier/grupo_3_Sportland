@@ -11,12 +11,14 @@
         <!--div id="banner">Espacio para el banner</div>-->
 
      <!------------------------------------------------BASO EN TU ULTIMA BUSQUEDA---------> 
-     <!----------------------------------------------------------------------------------->  
+     <!---------------------------------------  
         <p class="titulo">Basados en tu última búsqueda</p>
 <div class="contenedor">
+    -------------------------------------------->
 
     <!-------INICIO CICLO-->
-    <% productosVisitados.forEach(function(prod){ %>
+    <!--
+    <% products.forEach(function(prod){ %>
 
        
         <div class="cajaGrande">
@@ -47,7 +49,7 @@
 
     <%	}) %>
 
-
+    -->
     <!-------FIN CICLO -->
 
     <!-------------------------------------------------------------OFERTAS ESPECIALES---------> 
@@ -56,29 +58,31 @@
      <div class="contenedor">
 
          <!-------INICIO CICLO-->
-    <% productosVisitados.forEach(function(prod){ %>
+    <% products.forEach(function(prod){ %>
 
         <div class="cajaGrande">
-            <img src="/images/products/<%=prod.image %>" alt="<%= prod.name %>">
-    
-            <div class="cajaChica">   
-                       
-                
-                <div class="columnaIzq">
-                    <div class="renglonArriba">  
-                    <p class="precios">$<%= prod.price %></p>
-                    <p class="descuentos">20% OFF</p></div>
-                    <div class="renglonAbajo"> 
-                    <p class="descripciones"><%= prod.description %></p></div>
+            <a href="/products/detail/<%= prod.id %>">
+                <img src="/images/products/<%=prod.image %>" alt="<%= prod.name %>">
+        
+                <div class="cajaChica">   
+                        
+                    
+                    <div class="columnaIzq">
+                        <div class="renglonArriba">  
+                        <p class="precios">$<%= prod.price %></p>
+                        <p class="descuentos">20% OFF</p></div>
+                        <div class="renglonAbajo"> 
+                        <p class="descripciones"><%= prod.description %></p></div>
+                    </div>
+        
+                    <div class="columnaDer">
+                        <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
+                        <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
+                    </div>
+        
                 </div>
-    
-                <div class="columnaDer">
-                    <div class="iconoCarrito"> <i class="fas fa-shopping-cart"></i></div>
-                    <div class="iconoFavorito"> <i class="far fa-heart"></i></i></div>
-                </div>
-    
-            </div>
-          </div>
+            </a>
+        </div>
 
     <%	}) %>
 
