@@ -3,18 +3,26 @@
     <%- include('../partials/head') %>
 <body class="Site">
     <%- include('../partials/header') %>
+    <script src="/js/validacionesFrontProducto.js"></script>
+
+
     <main class="Site-content">
         <div class="contenedorMain">
-                      <h3>Formulario Alta de Producto</h3>  
-            <form class="contenedorMainForm" action="/products" method="POST" enctype="multipart/form-data">
+            <h3>Formulario Alta de Producto</h3>  
+            <form class="contenedorMainForm formAltaProducto"  action="/products" method="POST" enctype="multipart/form-data">
+
+                <div class="erroresProducto">
+                    <ul></ul>
+                </div>
 
                 <!-- NOMBRE DEL PRODUCTO -->
                 <label class="contMainFormA">Nombre del Producto</label>
-                 <input type="text"
+                 <input 
+                   type="text"
                    id="name"
                    name="name"
                    placeholder="Nombre de producto"
-                   class="contMainFormB"
+                   class="contMainFormB campoName_altaProd"
                    value="<%= (locals.oldData && oldData.name) ? oldData.name : '' %>"
                    >  
                                 <% if (locals.errors && errors.name) { %>
@@ -27,7 +35,7 @@
                     type="text" 
                     name="description" 
                     placeholder="Descripcion" 
-                    class="contMainFormB"
+                    class="contMainFormB campoDescripcion_altaProd"
                     value="<%= (locals.oldData && oldData.description) ? oldData.description : '' %>"
                     >
                     
