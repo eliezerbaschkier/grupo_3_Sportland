@@ -3,6 +3,8 @@
     <%- include('../partials/head') %>
 <body class="Site">
     <%- include('../partials/header') %>
+    <script src="/js/validacionesFrontUSR.js"></script>
+
     <main class="Site-content">
         <div class="contenedorMain">
             <div class="contenedorMainNav">
@@ -13,35 +15,42 @@
                 <a href="/users/login" class="contMainNavA">Ingresá</a>
             </div>            
             
-            <form class="contenedorMainForm" action="/users/register" method="POST" enctype="multipart/form-data">
+            <form class="contenedorMainForm fromAltaUSR" action="/users/register" method="POST" enctype="multipart/form-data">
+      
+      
+                <!-- First Name -------->
                 <label class="contMainFormA">Nombre</label>
                 <input
                     type="text"
                     name="first_name"
                     placeholder="Ingresa tu nombre"
-                    class="contMainFormB"
+                    class="contMainFormB campoFirstName_Register"
                     value="<%= (locals.oldData && oldData.first_name) ? oldData.first_name : '' %>"
                 > 
                 <% if (locals.errors && errors.first_name) { %>
                         <p class="contMainFormA error"><%= errors.first_name.msg %>  </p>
-                <% } %>              
+                <% } %>      
+                
+                <!-- Last Name ---------->
                 <label class="contMainFormA">Apellido</label>
                 <input
                     type="text"
                     name="last_name"
                     placeholder="Ingresa tu apellido"
-                    class="contMainFormB"
+                    class="contMainFormB campoLastName_Register"
                     value="<%= (locals.oldData && oldData.last_name) ? oldData.last_name : '' %>"
                 > 
                 <% if (locals.errors && errors.last_name) { %>
                     <p class="contMainFormA error"><%= errors.last_name.msg %>  </p>
-                <% } %>                
+                <% } %>     
+                
+                <!-- Email ------------>
                 <label class="contMainFormA">E-Mail</label>
                 <input
                     type="text"
                     name="email"
                     placeholder="Ingresa tu E-Mail"
-                    class="contMainFormB"
+                    class="contMainFormB campoEmail_Register"
                     value="<%= (locals.oldData && oldData.email) ? oldData.email : '' %>"
 
                 >
@@ -49,42 +58,51 @@
                     <p class="contMainFormA error"><%= errors.email.msg %>  </p>
                 <% } %>  
                 
-                
+                <!-- Contraseña ------------>
                 <label class="contMainFormA">Contraseña</label>
                 <input
                     type="password"
                     name="password"
                     placeholder="Ingresa tu contraseña"
-                    class="contMainFormB"
+                    class="contMainFormB campoContrasena_Register"
                 >
                 <% if (locals.errors && errors.password) { %>
                     <p class="contMainFormA error"><%= errors.password.msg %>  </p>
                 <% } %>
 
+                 <!-- Confirmar Contraseña ------------>
                 <label class="contMainFormA">Confirmar contraseña</label>
                 <input
                     type="password"
                     name="confirmPassword"
                     placeholder="Confirmá tu contraseña"
-                    class="contMainFormB"
+                    class="contMainFormB campoConfirmarContrasena_Register"
                 >
                 <% if (locals.errors && errors.confirmPassword) { %>
                     <p class="contMainFormA error"><%= errors.confirmPassword.msg %>  </p>
                 <% } %>
 
-
+                <!-- Imagen de Perfil ------------>
                 <label class="contMainFormA">Imagen</label>
                 <input
                     type="file"
                     name="image"
                     placeholder="Imagen"
-                    class="contMainFormB"
+                    class="contMainFormB campoImagen_register"
                 >  
                 <% if (locals.errors && errors.image) { %>
                     <p class="contMainFormA error"><%= errors.image.msg %>  </p>
-                <% } %>                  
+                <% } %>    
+                
+
+                <!-- Boton --->
                 <button class="contMainButton" type="submit">CREAR CUENTA</button>
             </form>
+
+<!-- Listados de errores en la validacion de Front -------->
+<div class="erroresRegister">
+ <ul></ul>
+ </div>
 
         </div>
     </main>
