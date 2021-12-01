@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+.erroresProducto{
+    color: red;
+    text-align: center;
+}
+
+.erroresRegister{
+    color: red;
+    text-align: center;
+}
+
 .mensaje-error{
     color: red;
     text-align: center;
