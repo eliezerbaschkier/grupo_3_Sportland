@@ -10,6 +10,8 @@ const session = require('express-session');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require('cookie-parser');
 
+const usersAPIRouter = require('./routes/api/users');//agregado para APIs
+
 app.use(session({
     secret: 'It is a secret',
     resave: false,
@@ -32,7 +34,10 @@ app.listen(3000, () => {
 
 app.use('/', routesIndex);
 app.use('/products', routesProducts);
-app.use('/users', routesUsers)
+app.use('/users', routesUsers);
+
+
+app.use('api/users',usersAPIRouter); //agregado APIS users
 
 //GET
 

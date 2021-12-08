@@ -169,5 +169,14 @@
   "password": "$2a$10$sOPqxQ.zAEMp6FBebN0hEeaYh8QVnygc2061kW9bYuWW2i.KvfqY6",
   "image": "user-1638141541058.jpg",
   "category": "client"
+ },
+ {
+  "id": 20,
+  "first_name": "christian",
+  "last_name": "bogliotti",
+  "email": "cbogliotti@riverplate.com.ar",
+  "password": "$2a$10$6HoOtFm/apayHmvFLOqEkurDyzVjdfPcAuRAf3TuN8RUFiIzcMJbW",
+  "image": "user-1638321452348.jpg",
+  "category": "client"
  }
 ]

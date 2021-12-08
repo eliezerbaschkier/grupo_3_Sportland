@@ -1,3 +1,5 @@
+//const contraseña= process.env.
+
 module.exports = {
   "development": {
     "username": "root",
