@@ -11,6 +11,7 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const cookies = require('cookie-parser');
 
 const usersAPIRouter = require('./routes/api/users');//agregado para APIs
+const productsAPIRouter = require('./routes/api/products');
 
 app.use(session({
     secret: 'It is a secret',
@@ -37,7 +38,8 @@ app.use('/products', routesProducts);
 app.use('/users', routesUsers);
 
 
-app.use('/api/users',usersAPIRouter); //agregado APIS users
+app.use('/api/users', usersAPIRouter); //agregado APIS users
+app.use('/api/products', productsAPIRouter);
 
 //GET
 
