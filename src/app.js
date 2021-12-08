@@ -37,7 +37,7 @@ app.use('/products', routesProducts);
 app.use('/users', routesUsers);
 
 
-app.use('api/users',usersAPIRouter); //agregado APIS users
+app.use('/api/users',usersAPIRouter); //agregado APIS users
 
 //GET
 
