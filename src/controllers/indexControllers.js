@@ -7,7 +7,7 @@ const indexControllers = {
     home: (req,res) => {
         let title = 'Sportland';
         db.Product.findAll({
-            limit: 4
+            limit: 8
         })
             .then(products => {
                 res.render('index', {title: title, products: products});
