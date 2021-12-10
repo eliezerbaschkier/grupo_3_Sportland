@@ -1,9 +1,10 @@
 const db = require('../../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const { QueryTypes } = require('sequelize');
 
 const productsAPIControllers = {
-    productList: (req,res) => {
+    productList: async (req,res) => {
+        const productCount = await db.sequelize.query("SELECT COUNT(DISTINCT id) AS quantity FROM sportland.products", { type: QueryTypes.SELECT });
+        const productCountByCategory = await db.sequelize.query("SELECT productCategory.name AS category, COUNT(*) AS quantity FROM sportland.products, sportland.productCategory WHERE products.category_id = productCategory.id GROUP BY products.category_id ", { type: QueryTypes.SELECT });
         let title = 'API Products List';
         let productsRequest = db.Product.findAll({
             attributes: ['id', 'name', 'description'],
@@ -35,7 +36,7 @@ const productsAPIControllers = {
                 };
                 */
                 for(i = 0 ; i < products.length ; i++) {
-                    products[i]['dataValues']['detail'] = 'api/products/' + products[i].id;
+                    products[i]['dataValues']['detail'] = req.protocol + '://' + req.headers.host + '/api/products/' + products[i].id;
                 };
                 
                 for(i = 0 ; i < products.length ; i++) {
@@ -51,9 +52,9 @@ const productsAPIControllers = {
                         status : 200,
                         url: 'api/products'
                     },
-                    count: products.length,
-                    // countByCategory: {}
-                    products,
+                    count: productCount,
+                    countByCategory: productCountByCategory,
+                    products
                 };
                 
                 res.json(respuesta);
@@ -78,7 +79,8 @@ const productsAPIControllers = {
                 delete product.dataValues.categories.dataValues.deleted_at;
 
                 console.log(product.dataValues.image);
-                product.dataValues.image = '/images/products/' + product.dataValues.image;
+                console.log(req.protocol);
+                product.dataValues.image = req.protocol + '://' + req.headers.host + '/images/products/' + product.dataValues.image;
 
 
                 let respuesta = {
