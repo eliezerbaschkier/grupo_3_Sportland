@@ -178,5 +178,23 @@
   "password": "$2a$10$6HoOtFm/apayHmvFLOqEkurDyzVjdfPcAuRAf3TuN8RUFiIzcMJbW",
   "image": "user-1638321452348.jpg",
   "category": "client"
+ },
+ {
+  "id": 21,
+  "first_name": "Eliezer",
+  "last_name": "Baschkier",
+  "email": "eliezerbaschkier@gmail.com",
+  "password": "$2a$10$itPm3ZfuEW6ONgchxJcUhudBIWkzKlQn4VGDd9V1ukqtuu4FqH4zO",
+  "image": "user-1639437554733.png",
+  "category": "client"
+ },
+ {
+  "id": 22,
+  "first_name": "Lionel",
+  "last_name": "Messi",
+  "email": "lionel@messi.com",
+  "password": "$2a$10$A1MtEbuqIUbmNU1FykbGiu/wKsZJO8/LQl6dRdCAodoSsfT6jeu/K",
+  "image": "user-1639438581503.jpeg",
+  "category": "client"
  }
 ]

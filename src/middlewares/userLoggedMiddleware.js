@@ -9,7 +9,8 @@ async function userLoggedMiddleware(req, res, next) {
 
 	if (emailInCookie) {
 	let userFromCookie = await db.User.findOne({
-		where: {
+		attributes: ['id','first_name', 'last_name', 'email', 'image', 'category']
+		,where: {
 			email: emailInCookie
 		}});
 

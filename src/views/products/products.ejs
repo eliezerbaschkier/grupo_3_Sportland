@@ -6,8 +6,9 @@
     <main class="Index">
 
         <h2 style="color: rgb(245, 239, 239); margin-right: 60vw;">Listado de productos</h2>
-
-        <a style="color: rgb(245, 239, 239); margin-right: 70vw;" href="/products/create">Crear producto</a>
+        <% if (locals.isLogged && userLogged.category == 'admin') { %>
+            <a style="color: rgb(245, 239, 239); margin-right: 70vw;" href="/products/create">Crear producto</a>
+        <% } %>
 
         <div class="contenedor">
 
